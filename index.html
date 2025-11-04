@@ -37,7 +37,7 @@
     .avatar:after { content: ""; position: absolute; inset: 1px; border-radius: 16px;
       background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 40%), rgba(255,255,255,.08); }
 
-    /* Active link style for scroll‑spy */
+    /* Active link style for scroll-spy */
     nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; font-weight: 600; }
 
     /* Carousel */
@@ -55,11 +55,17 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur glass border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex h-20 items-center justify-between"><!-- bigger nav height -->
-        <a href="#home" class="flex items-center gap-3 font-extrabold text-2xl"><!-- bigger brand -->
-
+      <div class="flex h-20 items-center justify-between">
+        <a href="#home" class="flex items-center gap-3 font-extrabold text-2xl">
           <span class="text-slate-800 dark:text-white tracking-tight">Sofbit</span>
-          <img src="assets/sofbitavatar.png" alt="Sofbit logo" class="h-12 w-auto" />
+          <img
+            id="brandLogo"
+            src="assets/sofbitavatar.png"
+            data-light="assets/sofbitavatar.png"
+            data-dark="assets/sofbitavatar_white.png"
+            alt="Sofbit logo"
+            class="h-12 w-auto"
+          />
         </a>
         <nav class="hidden md:flex items-center gap-8 text-base">
           <a href="#features" class="hover:opacity-80">Features</a>
@@ -101,7 +107,7 @@
           Chilean Code <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-violet-500">Elevating American Innovation</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-slate-700 dark:text-slate-300">Your timezone. Your language. Our expertise.
-          Nearshore software engineering from Santiago and Viña del Mar. Bilingual senior developers, timezone‑aligned with the U.S.</p>
+          Nearshore software engineering from Santiago and Viña del Mar. Bilingual senior developers, timezone-aligned with the U.S.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#book" data-calendly="open" class="px-6 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium shadow hover:shadow-lg">Book a Call</a>
           <a href="#features" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Learn More</a>
@@ -129,12 +135,12 @@
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
           <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">👩‍💻</div>
           <h3 class="font-semibold text-lg">Senior engineers on demand</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full‑stack, mobile, and cloud specialists vetted for impact. Ramp in days, not months.</p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full-stack, mobile, and cloud specialists vetted for impact. Ramp in days, not months.</p>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
           <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🕑</div>
           <h3 class="font-semibold text-lg">Timezone aligned (PT–ET)</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side‑by‑side with your team across North American hours for real‑time collaboration.</p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side-by-side with your team across North American hours for real-time collaboration.</p>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
           <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🗣️</div>
@@ -145,40 +151,24 @@
     </div>
   </section>
 
-    <!-- About with photo slot -->
-    <section id="about" class="py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <h2 class="text-3xl md:text-4xl font-bold">Your nearshore product partner</h2>
-          <p class="mt-4 text-slate-600 dark:text-slate-300">From concept to scale, we integrate seamlessly into your workflow—sprint planning, code reviews, CI/CD pipelines—and deliver production-ready software that moves fast without breaking things.</p>
-          <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
-            <li class="flex items-start">
-              <span class="mr-2">•</span>
-              <span><strong>Flexible engagement:</strong> Staff augmentation to full dedicated squads</span>
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">•</span>
-              <span><strong>Full-stack expertise:</strong> TypeScript/Node, React/Next, Python, .NET, Java, Go, Swift, Kotlin—plus LLM integration and AI</span>
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">•</span>
-              <span><strong>Cloud-native:</strong> AWS, Azure, GCP with IaC, containerization, and observability built in</span>
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">•</span>
-              <span><strong>Ship with confidence:</strong> Test-driven, security-first, performance-optimized</span>
-            </li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-2 md:p-6 reveal">
-          <!-- SANTIAGO OFFICE PHOTO DROP ZONE -->
-          <img src="assets/citymap.png" alt="WeWork Manquehue / Vitacura" class="rounded-xl shadow-lg w-full object-cover" />
-        </div>
+  <!-- About -->
+  <section id="about" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold">Your nearshore product partner</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">From concept to scale, we integrate seamlessly into your workflow—sprint planning, code reviews, CI/CD pipelines—and deliver production-ready software that moves fast without breaking things.</p>
+        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Flexible engagement:</strong> Staff augmentation to full dedicated squads</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Full-stack expertise:</strong> TypeScript/Node, React/Next, Python, .NET, Java, Go, Swift, Kotlin—plus LLM integration and AI</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Cloud-native:</strong> AWS, Azure, GCP with IaC, containerization, and observability built in</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Ship with confidence:</strong> Test-driven, security-first, performance-optimized</span></li>
+        </ul>
       </div>
-    </section>
-
-
-
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-2 md:p-6 reveal">
+        <img src="assets/citymap.png" alt="WeWork Manquehue / Vitacura" class="rounded-xl shadow-lg w-full object-cover" />
+      </div>
+    </div>
+  </section>
 
   <!-- OPEN POSITIONS (Carousel + Learn More modal) -->
   <section id="jobs" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800">
@@ -193,89 +183,105 @@
           <button id="nextBtn" class="rounded-xl border px-3 py-2 text-sm">Next →</button>
         </div>
       </div>
+      <div id="jobsCarousel" class="carousel" aria-label="Job openings carousel"></div>
+    </div>
+  </section>
 
-      <!-- Carousel -->
-      <div id="jobsCarousel" class="carousel" aria-label="Job openings carousel">
-        <!-- Slides are rendered from JS data for easier maintenance -->
+  <!-- We're hiring / Quick Apply (stylish card + icons) -->
+  <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold">We're hiring</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Looking for your next opportunity? We'd love to hear from you.</p>
       </div>
 
-      <!-- Fallback 'All roles' list (SSR-like) -->
-      <noscript>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
-          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
-            <h3 class="font-semibold">Senior Full‑stack Engineer</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">TypeScript · Node · React · AWS</p>
-          </article>
-          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
-            <h3 class="font-semibold">Mobile Engineer</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">React Native · Kotlin/Swift</p>
-          </article>
-          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
-            <h3 class="font-semibold">DevOps / SRE</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Kubernetes · IaC · Observability</p>
-          </article>
-        </div>
-      </noscript>
-    </div>
+      <form id="apply" method="POST" action="https://formspree.io/f/mgvpjljq"
+            class="mt-10 mx-auto max-w-3xl bg-gradient-to-r from-cyan-500/30 via-transparent to-violet-500/30 p-[1px] rounded-3xl">
+        <div class="rounded-3xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800/70 p-6 md:p-8 shadow-sm">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="grid gap-1 text-sm">
+              <span class="font-medium">Full name</span>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2">👤</span>
+                <input name="name" required
+                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                              focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
+              </div>
+            </label>
+            <label class="grid gap-1 text-sm">
+              <span class="font-medium">Email</span>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2">✉️</span>
+                <input type="email" name="email" required
+                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                              focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
+              </div>
+            </label>
+          </div>
 
-       <!-- Quick Apply form -->
-       <form id="apply" method="POST" action="https://formspree.io/f/mgvpjljq" class="mt-10 grid gap-4 max-w-3xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-4">
-          
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">Full name</span>
-            <input name="name" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          <div class="grid md:grid-cols-3 gap-4 mt-4">
+            <label class="grid gap-1 text-sm">
+              <span class="font-medium">LinkedIn</span>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2">🔗</span>
+                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/…"
+                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                              focus:outline-none focus:ring-4 ring-violet-500/20 dark:ring-violet-400/20" />
+              </div>
+            </label>
+            <label class="grid gap-1 text-sm">
+              <span class="font-medium">GitHub</span>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2">💻</span>
+                <input type="url" name="github" placeholder="https://github.com/…"
+                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                              focus:outline-none focus:ring-4 ring-violet-500/20 dark:ring-violet-400/20" />
+              </div>
+            </label>
+            <label class="grid gap-1 text-sm">
+              <span class="font-medium">Role</span>
+              <select name="role"
+                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2
+                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20">
+                <option>Senior Full-stack Engineer</option>
+                <option>Mobile Engineer</option>
+                <option>Data Modeler</option>
+                <option>DevOps / SRE</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="grid gap-1 text-sm mt-4">
+            <span class="font-medium">Notes (optional)</span>
+            <textarea name="notes" rows="4"
+                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2
+                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20"
+                      placeholder="Links, availability, portfolio…"></textarea>
           </label>
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">Email</span>
-            <input type="email" name="email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
-          </label>
-        </div>
-        <div class="grid md:grid-cols-3 gap-4">
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">LinkedIn</span>
-            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/…" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
-          </label>
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">GitHub</span>
-            <input type="url" name="github" placeholder="https://github.com/…" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
-          </label>
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">Role</span>
-            <select name="role" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
-              <option>Senior Full‑stack Engineer</option>
-              <option>Mobile Engineer</option>
-              <option>DevOps / SRE</option>
-              <option>Other</option>
-            </select>
-          </label>
-        </div>
-        <label class="grid gap-1 text-sm">
-          <span class="font-medium">Notes (optional)</span>
-          <textarea name="notes" rows="4" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Links, availability, portfolio…"></textarea>
-        </label>
-        <div class="flex items-center justify-between">
-          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
-            <input type="checkbox" required class="accent-slate-900 dark:accent-white" /> I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
-          </label>
-          <button class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2 font-medium">Submit</button>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+            <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+              <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
+              I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
+            </label>
+            <button class="inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900
+                           px-5 py-3 font-medium shadow hover:shadow-lg">
+              Submit <span aria-hidden>→</span>
+            </button>
+          </div>
         </div>
       </form>
     </div>
-  </section> 
+  </section>
 
-  <br>
-
-
-  <!-- Pre-footer banner with Santiago photo slot -->
+  <!-- Pre-footer banner -->
   <section class="relative h-64 overflow-hidden">
     <img src="assets/vina.jpg" alt="Santiago & Andes" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-slate-900/45 flex items-center justify-center">
       <p class="text-white text-xl md:text-2xl font-semibold">Chilean Code. Global Impact.</p>
     </div>
   </section>
-
-
 
   <!-- Contact -->
   <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
@@ -288,23 +294,40 @@
         <div class="grid md:grid-cols-2 gap-4">
           <label class="grid gap-1 text-sm">
             <span class="font-medium">Name</span>
-            <input required name="name" type="text" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2">👤</span>
+              <input required name="name" type="text"
+                     class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                            focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
+            </div>
           </label>
           <label class="grid gap-1 text-sm">
             <span class="font-medium">Email</span>
-            <input required name="email" type="email" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2">✉️</span>
+              <input required name="email" type="email"
+                     class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                            focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
+            </div>
           </label>
         </div>
         <label class="grid gap-1 text-sm">
           <span class="font-medium">Message</span>
-          <textarea required name="message" rows="5" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2"></textarea>
+          <div class="relative">
+            <span class="absolute left-3 top-3">✍️</span>
+            <textarea required name="message" rows="5"
+                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
+                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20"></textarea>
+          </div>
         </label>
         <div class="flex items-center justify-between">
           <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
             <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
             I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
           </label>
-          <button type="submit" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2 font-medium">Send</button>
+          <button type="submit" class="inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 font-medium shadow hover:shadow-lg">
+            Send <span aria-hidden>→</span>
+          </button>
         </div>
       </form>
     </div>
@@ -314,7 +337,14 @@
   <footer class="py-12 border-t border-slate-200/70 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img src="assets/sofbitavatar.png" alt="Sofbit logo" class="h-8" />
+        <img
+          id="footerLogo"
+          src="assets/sofbitavatar.png"
+          data-light="assets/sofbitavatar.png"
+          data-dark="assets/sofbitavatar_white.png"
+          alt="Sofbit logo"
+          class="h-8"
+        />
         <span class="text-sm text-slate-500">Sofbit SpA — Vitacura, Santiago Chile · WeWork Manquehue</span>
       </div>
       <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. All rights reserved.</p>
@@ -339,8 +369,8 @@
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
-    // === Calendly Config: set your URL in ONE place ===
-    const CALENDLY_URL = 'https://calendly.com/cisco-sofbit/30min" style="min-width:320px;height:700px;"' // ← replace with your real link
+    // === Calendly Config (fixed) ===
+    const CALENDLY_URL = 'https://calendly.com/cisco-sofbit/30min';
     const cw = document.getElementById('calendly-widget');
     if (cw) cw.setAttribute('data-url', CALENDLY_URL);
     function openCalendly(e){
@@ -359,8 +389,17 @@
     const toggle = document.getElementById('themeToggle');
     const root = document.documentElement; const KEY = 'prefers-dark';
     function applyTheme(){ const p = localStorage.getItem(KEY); p==='true'?root.classList.add('dark'):root.classList.remove('dark'); }
-    toggle && toggle.addEventListener('click',()=>{ const next = !(localStorage.getItem(KEY)==='true'); localStorage.setItem(KEY, String(next)); applyTheme(); });
+    toggle && toggle.addEventListener('click',()=>{ const next = !(localStorage.getItem(KEY)==='true'); localStorage.setItem(KEY, String(next)); applyTheme(); updateImagesForTheme(); });
     applyTheme();
+
+    // Swap logos/images for dark & light
+    function updateImagesForTheme() {
+      const isDark = document.documentElement.classList.contains('dark');
+      document.querySelectorAll('img[data-light][data-dark]').forEach(img => {
+        img.src = isDark ? img.getAttribute('data-dark') : img.getAttribute('data-light');
+      });
+    }
+    updateImagesForTheme();
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -380,7 +419,7 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
-    // Scroll‑spy (active nav + hash updates)
+    // Scroll-spy (active nav + hash updates)
     const sections = Array.from(document.querySelectorAll('section[id]'));
     const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
     const byId = id => navLinks.find(a => a.getAttribute('href') === `#${id}`);
@@ -408,11 +447,11 @@
     const JOBS = [
       {
         id: 'fullstack',
-        title: 'Senior Full‑stack Engineer',
+        title: 'Senior Full-stack Engineer',
         summary: 'Build production web apps for U.S. customers with TypeScript, Node, React, and AWS. Product-focused, fast delivery.',
         tags: ['TypeScript','Node','React','AWS'],
         requirements: [
-          '5+ years building and shipping web apps in production',
+          '8+ years building and shipping web apps in production',
           'Fluency in TypeScript/Node and React/Next.js',
           'Experience with AWS (Lambda, ECS/Fargate, RDS/DynamoDB)',
           'Comfortable with CI/CD, automated testing, and code reviews',
@@ -425,11 +464,25 @@
         summary: 'Ship high-quality iOS/Android apps with React Native or native stacks. Work closely with product and design.',
         tags: ['React Native','iOS','Android','Kotlin/Swift'],
         requirements: [
-          '3+ years building mobile apps (React Native or native)',
+          '5+ years building mobile apps (React Native or native)',
           'Experience publishing to App Store / Play Store',
           'Performance profiling and debugging skills',
           'Familiar with mobile CI, OTA updates, and analytics',
           'Strong UX sensibility and attention to detail'
+        ]
+      },
+      {
+        id: 'modeler',
+        title: 'AI Data Curator',
+        summary: 'Evaluate and refine AI model outputs to ensure accuracy and quality. Review LLM responses, identify patterns in errors, and create datasets that improve model performance.',
+        tags: ['LLM Evaluation', 'Data Analysis', 'RLHF', 'Quality Assurance'],
+        requirements: [
+          '2+ years in data analysis, QA, or related field',
+          'Strong attention to detail and pattern recognition skills',
+          'Experience working with AI/ML outputs or content moderation',
+          'Excellent written communication and documentation abilities',
+          'Understanding of LLMs and common failure modes',
+          'Bonus: Experience with prompt engineering or annotation tools'
         ]
       },
       {
@@ -438,7 +491,7 @@
         summary: 'Own reliability and delivery pipelines. Kubernetes, IaC, observability, and platform tooling for fast iteration.',
         tags: ['Kubernetes','IaC','Observability','AWS/Azure/GCP'],
         requirements: [
-          '4+ years as DevOps/SRE with modern cloud platforms',
+          '10+ years as DevOps/SRE with modern cloud platforms',
           'Hands-on Kubernetes and infrastructure-as-code (Terraform/Pulumi)',
           'Logging/metrics/tracing (ELK, Prometheus, Grafana, OpenTelemetry)',
           'Security best practices, secrets, and incident response',
@@ -447,7 +500,7 @@
       }
     ];
 
-    // ===== Render carousel slides =====
+    // Render carousel slides
     const carousel = document.getElementById('jobsCarousel');
     function renderSlides() {
       carousel.innerHTML = '';
@@ -465,7 +518,7 @@
     }
     renderSlides();
 
-    // ===== Modal logic =====
+    // Modal logic
     const modal = document.getElementById('jobModal');
     const closeModalBtn = document.getElementById('closeModal');
     const jobTitle = document.getElementById('jobTitle');
@@ -483,9 +536,7 @@
       modal.classList.add('show');
       lastFocus = document.activeElement;
       closeModalBtn.focus();
-      // Escape closes
       const onKey = (e)=>{ if(e.key === 'Escape'){ closeJob(); } };
-      modal.dataset.keyListener = 'true';
       document.addEventListener('keydown', onKey, { once: true });
     }
     function closeJob(){
@@ -500,7 +551,7 @@
       openJob(btn.getAttribute('data-learn'));
     });
 
-    // ===== Carousel controls =====
+    // Carousel controls
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     function scrollByCards(dir = 1){
@@ -513,7 +564,7 @@
     prevBtn && prevBtn.addEventListener('click', ()=> scrollByCards(-1));
     nextBtn && nextBtn.addEventListener('click', ()=> scrollByCards(1));
 
-    // Auto-advance every 6s (pauses on hover/focus)
+    // Auto-advance
     let autoTimer = null;
     function startAuto(){ autoTimer = setInterval(()=> scrollByCards(1), 6000); }
     function stopAuto(){ if(autoTimer) clearInterval(autoTimer); autoTimer = null; }
