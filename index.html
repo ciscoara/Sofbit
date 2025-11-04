@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sofbit — Chilean Code, Elevating American Innovation</title>
+  <meta name="description" content="Sofbit SpA provides nearshore software engineering from Vitacura, Santiago Chile. Chilean code powering American innovation and support." />
+  <meta property="og:title" content="Sofbit — Chilean Code, Elevating American Innovation" />
+  <meta property="og:description" content="Sofbit SpA out of Vitacura, Santiago Chile, delivers top-tier nearshore development talent supporting U.S. innovation and digital growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/sofbittransparent11.png" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #06b6d4, #a78bfa);
+      background-size: 0 2px, 100% 2px; background-position: 0 100%, 0 100%; background-repeat: no-repeat; transition: background-size .2s ease; }
+    .link-underline:hover { background-size: 100% 2px, 100% 2px; }
+    .glass { backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,.55)); }
+    .dark .glass { background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(2,6,23,.5)); }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .grad { background: radial-gradient(1200px 600px at 10% 10%, rgba(34,211,238,.25), transparent 60%),
+                        radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.25), transparent 60%); }
+    #progress { position: fixed; inset-inline: 0; top: 0; height: 4px; background: linear-gradient(90deg, #06b6d4, #a78bfa); transform-origin: 0 50%; z-index: 60; }
+
+    /* Floating orb motion */
+    @keyframes floatOrb { 0%{transform:translateY(0) rotate(0deg) scale(1)} 50%{transform:translateY(-10px) rotate(2deg) scale(1.02)} 100%{transform:translateY(0) rotate(0deg) scale(1)} }
+    .floating-orb { animation: floatOrb 9s ease-in-out infinite; }
+
+    /* Modern gradient avatars */
+    .avatar { --s: 56px; width: var(--s); height: var(--s);
+      border-radius: 18px; position: relative; overflow: hidden; box-shadow: 0 10px 25px rgba(2,6,23,.15);
+      background: conic-gradient(from 210deg, #06b6d4, #8b5cf6, #06b6d4); }
+    .avatar:after { content: ""; position: absolute; inset: 1px; border-radius: 16px;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 40%), rgba(255,255,255,.08); }
+
+    /* Active link style for scroll‑spy */
+    nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; font-weight: 600; }
+
+    /* Carousel */
+    .carousel { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 80%; gap: 1rem; padding-bottom: .5rem; }
+    @media (min-width: 768px){ .carousel { grid-auto-columns: calc((100% - 2rem)/3); } }
+    .carousel > article { scroll-snap-align: start; }
+
+    /* Modal backdrop */
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(2,6,23,.6); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 70; }
+    .modal-backdrop.show { display: flex; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <div id="progress"></div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur glass border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex h-20 items-center justify-between"><!-- bigger nav height -->
+        <a href="#home" class="flex items-center gap-3 font-extrabold text-2xl"><!-- bigger brand -->
+
+          <span class="text-slate-800 dark:text-white tracking-tight">Sofbit</span>
+          <img src="assets/sofbitavatar.png" alt="Sofbit logo" class="h-12 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-base">
+          <a href="#features" class="hover:opacity-80">Features</a>
+          <a href="#about" class="hover:opacity-80">About</a>
+          <a href="#jobs" class="hover:opacity-80">Open positions</a>
+          <a href="#contact" class="hover:opacity-80">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" aria-label="Toggle dark mode" class="hidden md:inline-flex rounded-xl px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">🌙</button>
+          <a href="#book" data-calendly="open" class="hidden md:inline-flex items-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 text-sm font-semibold shadow hover:shadow-md">Book a call</a>
+          <button id="menuBtn" class="md:hidden rounded-xl border px-3 py-2 text-sm">Menu</button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-3 space-y-2 text-base">
+        <a href="#features" class="block">Features</a>
+        <a href="#about" class="block">About</a>
+        <a href="#jobs" class="block">Open positions</a>
+        <a href="#contact" class="block">Contact</a>
+        <a href="#book" data-calendly="open" class="block">Book a call</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (left-aligned) -->
+  <section id="home" class="relative overflow-hidden grad">
+    <!-- HERO PHOTO DROP ZONE -->
+    <img src="assets/dtsantiago.jpg" alt="Santiago skyline" class="absolute inset-0 -z-20 w-full h-full object-cover opacity-55" />
+    <!-- Brand orb -->
+    <img src="assets/sofbitavatar.png" alt="Sofbit abstract orb" class="absolute right-0 top-0 opacity-30 w-1/3 max-w-xs md:max-w-sm floating-orb -z-10" />
+    <!-- Soft overlay -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-white/60 to-white/80 dark:from-slate-950/80 dark:via-slate-900/70 dark:to-slate-950/85"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-24 md:py-32">
+      <div class="max-w-2xl md:max-w-3xl reveal">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+          Chilean Code <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-violet-500">Elevating American Innovation</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-700 dark:text-slate-300">Your timezone. Your language. Our expertise.
+          Nearshore software engineering from Santiago and Viña del Mar. Bilingual senior developers, timezone‑aligned with the U.S.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#book" data-calendly="open" class="px-6 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium shadow hover:shadow-lg">Book a Call</a>
+          <a href="#features" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Learn More</a>
+        </div>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm md:text-base">We specialize in TypeScript/Node, React/Next, Python, .NET, Java, Swift, Kotlin, Android, iOS, and cloud platforms (AWS/Azure/GCP). We also offer expertise in LLM integration, prompt engineering, RAG systems, fine-tuning, and AI agent development. Engagements from staff augmentation to dedicated squads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Senior talent, seamless collaboration</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">We plug in where you need momentum most.</p>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <div class="avatar" title="Engineer"></div>
+          <div class="avatar" title="Tech Lead" style="--s:64px"></div>
+          <div class="avatar" title="QA"></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">👩‍💻</div>
+          <h3 class="font-semibold text-lg">Senior engineers on demand</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full‑stack, mobile, and cloud specialists vetted for impact. Ramp in days, not months.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🕑</div>
+          <h3 class="font-semibold text-lg">Timezone aligned (PT–ET)</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side‑by‑side with your team across North American hours for real‑time collaboration.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🗣️</div>
+          <h3 class="font-semibold text-lg">Bilingual communication</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">English/Spanish fluent engineers, strong product sensibilities, and crisp async updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- About with photo slot -->
+    <section id="about" class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-bold">Your nearshore product partner</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">From concept to scale, we integrate seamlessly into your workflow—sprint planning, code reviews, CI/CD pipelines—and deliver production-ready software that moves fast without breaking things.</p>
+          <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Flexible engagement:</strong> Staff augmentation to full dedicated squads</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Full-stack expertise:</strong> TypeScript/Node, React/Next, Python, .NET, Java, Go, Swift, Kotlin—plus LLM integration and AI</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Cloud-native:</strong> AWS, Azure, GCP with IaC, containerization, and observability built in</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span><strong>Ship with confidence:</strong> Test-driven, security-first, performance-optimized</span>
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-2 md:p-6 reveal">
+          <!-- SANTIAGO OFFICE PHOTO DROP ZONE -->
+          <img src="assets/citymap.png" alt="WeWork Manquehue / Vitacura" class="rounded-xl shadow-lg w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+
+
+
+  <!-- OPEN POSITIONS (Carousel + Learn More modal) -->
+  <section id="jobs" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl md:text-4xl font-bold">Open positions</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">We’re always meeting great Chilean engineers. Browse roles and learn more.</p>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <button id="prevBtn" class="rounded-xl border px-3 py-2 text-sm">← Prev</button>
+          <button id="nextBtn" class="rounded-xl border px-3 py-2 text-sm">Next →</button>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="jobsCarousel" class="carousel" aria-label="Job openings carousel">
+        <!-- Slides are rendered from JS data for easier maintenance -->
+      </div>
+
+      <!-- Fallback 'All roles' list (SSR-like) -->
+      <noscript>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
+            <h3 class="font-semibold">Senior Full‑stack Engineer</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">TypeScript · Node · React · AWS</p>
+          </article>
+          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
+            <h3 class="font-semibold">Mobile Engineer</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">React Native · Kotlin/Swift</p>
+          </article>
+          <article class="rounded-2xl border p-6 bg-white dark:bg-slate-950">
+            <h3 class="font-semibold">DevOps / SRE</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Kubernetes · IaC · Observability</p>
+          </article>
+        </div>
+      </noscript>
+    </div>
+
+       <!-- Quick Apply form -->
+       <form id="apply" method="POST" action="https://formspree.io/f/mgvpjljq" class="mt-10 grid gap-4 max-w-3xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-4">
+          
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">Full name</span>
+            <input name="name" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">Email</span>
+            <input type="email" name="email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">LinkedIn</span>
+            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/…" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">GitHub</span>
+            <input type="url" name="github" placeholder="https://github.com/…" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">Role</span>
+            <select name="role" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
+              <option>Senior Full‑stack Engineer</option>
+              <option>Mobile Engineer</option>
+              <option>DevOps / SRE</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label class="grid gap-1 text-sm">
+          <span class="font-medium">Notes (optional)</span>
+          <textarea name="notes" rows="4" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Links, availability, portfolio…"></textarea>
+        </label>
+        <div class="flex items-center justify-between">
+          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+            <input type="checkbox" required class="accent-slate-900 dark:accent-white" /> I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
+          </label>
+          <button class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2 font-medium">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section> 
+
+  <br>
+
+
+  <!-- Pre-footer banner with Santiago photo slot -->
+  <section class="relative h-64 overflow-hidden">
+    <img src="assets/vina.jpg" alt="Santiago & Andes" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-slate-900/45 flex items-center justify-center">
+      <p class="text-white text-xl md:text-2xl font-semibold">Chilean Code. Global Impact.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold">Get in touch</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Questions, staffing needs, or project ideas—drop us a line.</p>
+      </div>
+      <form method="POST" action="https://formspree.io/f/mvgvjbjn" class="grid gap-4 reveal">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">Name</span>
+            <input required name="name" type="text" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span class="font-medium">Email</span>
+            <input required name="email" type="email" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" />
+          </label>
+        </div>
+        <label class="grid gap-1 text-sm">
+          <span class="font-medium">Message</span>
+          <textarea required name="message" rows="5" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2"></textarea>
+        </label>
+        <div class="flex items-center justify-between">
+          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+            <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
+            I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
+          </label>
+          <button type="submit" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2 font-medium">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/sofbitavatar.png" alt="Sofbit logo" class="h-8" />
+        <span class="text-sm text-slate-500">Sofbit SpA — Vitacura, Santiago Chile · WeWork Manquehue</span>
+      </div>
+      <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for job details -->
+  <div id="jobModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="jobTitle">
+    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
+      <div class="flex items-start justify-between gap-4">
+        <h3 id="jobTitle" class="text-xl md:text-2xl font-bold">Job title</h3>
+        <button id="closeModal" class="rounded-xl border px-3 py-2 text-sm">Close</button>
+      </div>
+      <p id="jobSummary" class="mt-3 text-slate-600 dark:text-slate-300"></p>
+      <h4 class="mt-5 font-semibold">Requirements</h4>
+      <ul id="jobReqs" class="list-disc pl-5 mt-2 text-slate-700 dark:text-slate-300"></ul>
+      <div class="mt-6 flex items-center justify-end gap-3">
+        <a id="jobApply" href="#apply" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2">Apply</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    // === Calendly Config: set your URL in ONE place ===
+    const CALENDLY_URL = 'https://calendly.com/cisco-sofbit/30min" style="min-width:320px;height:700px;"' // ← replace with your real link
+    const cw = document.getElementById('calendly-widget');
+    if (cw) cw.setAttribute('data-url', CALENDLY_URL);
+    function openCalendly(e){
+      e.preventDefault();
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else if (cw) {
+        cw.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.location.href = CALENDLY_URL;
+      }
+    }
+    document.querySelectorAll('[data-calendly="open"]').forEach(el=> el.addEventListener('click', openCalendly));
+
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement; const KEY = 'prefers-dark';
+    function applyTheme(){ const p = localStorage.getItem(KEY); p==='true'?root.classList.add('dark'):root.classList.remove('dark'); }
+    toggle && toggle.addEventListener('click',()=>{ const next = !(localStorage.getItem(KEY)==='true'); localStorage.setItem(KEY, String(next)); applyTheme(); });
+    applyTheme();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll progress bar
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', ()=>{ const h = document.documentElement; const s = h.scrollTop; const d = h.scrollHeight - h.clientHeight; progress.style.transform = `scaleX(${d? s/d : 0})`; });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn && menuBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+
+    // Intersection reveal animations
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // Scroll‑spy (active nav + hash updates)
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+    const byId = id => navLinks.find(a => a.getAttribute('href') === `#${id}`);
+    function setActive(id){
+      navLinks.forEach(a => a.removeAttribute('aria-current'));
+      const link = byId(id); if (link) link.setAttribute('aria-current','page');
+    }
+    const spy = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ const id = e.target.id; setActive(id); history.replaceState(null,'',`#${id}`); }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+    sections.forEach(sec => spy.observe(sec));
+    navLinks.forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(!target) return; ev.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.setAttribute('tabindex','-1'); target.focus({ preventScroll: true });
+      });
+    });
+
+    // ===== Jobs Data =====
+    const JOBS = [
+      {
+        id: 'fullstack',
+        title: 'Senior Full‑stack Engineer',
+        summary: 'Build production web apps for U.S. customers with TypeScript, Node, React, and AWS. Product-focused, fast delivery.',
+        tags: ['TypeScript','Node','React','AWS'],
+        requirements: [
+          '5+ years building and shipping web apps in production',
+          'Fluency in TypeScript/Node and React/Next.js',
+          'Experience with AWS (Lambda, ECS/Fargate, RDS/DynamoDB)',
+          'Comfortable with CI/CD, automated testing, and code reviews',
+          'Strong English communication (written & spoken)'
+        ]
+      },
+      {
+        id: 'mobile',
+        title: 'Mobile Engineer',
+        summary: 'Ship high-quality iOS/Android apps with React Native or native stacks. Work closely with product and design.',
+        tags: ['React Native','iOS','Android','Kotlin/Swift'],
+        requirements: [
+          '3+ years building mobile apps (React Native or native)',
+          'Experience publishing to App Store / Play Store',
+          'Performance profiling and debugging skills',
+          'Familiar with mobile CI, OTA updates, and analytics',
+          'Strong UX sensibility and attention to detail'
+        ]
+      },
+      {
+        id: 'sre',
+        title: 'DevOps / SRE',
+        summary: 'Own reliability and delivery pipelines. Kubernetes, IaC, observability, and platform tooling for fast iteration.',
+        tags: ['Kubernetes','IaC','Observability','AWS/Azure/GCP'],
+        requirements: [
+          '4+ years as DevOps/SRE with modern cloud platforms',
+          'Hands-on Kubernetes and infrastructure-as-code (Terraform/Pulumi)',
+          'Logging/metrics/tracing (ELK, Prometheus, Grafana, OpenTelemetry)',
+          'Security best practices, secrets, and incident response',
+          'Excellent collaboration with developers and QA'
+        ]
+      }
+    ];
+
+    // ===== Render carousel slides =====
+    const carousel = document.getElementById('jobsCarousel');
+    function renderSlides() {
+      carousel.innerHTML = '';
+      JOBS.forEach(job => {
+        const el = document.createElement('article');
+        el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950';
+        el.innerHTML = `
+          <h3 class="font-semibold">${job.title}</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">${job.tags.join(' · ')}</p>
+          <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">${job.summary}</p>
+          <button data-learn="${job.id}" class="mt-4 inline-flex rounded-xl border px-3 py-2 text-sm">Learn more</button>
+        `;
+        carousel.appendChild(el);
+      });
+    }
+    renderSlides();
+
+    // ===== Modal logic =====
+    const modal = document.getElementById('jobModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const jobTitle = document.getElementById('jobTitle');
+    const jobSummary = document.getElementById('jobSummary');
+    const jobReqs = document.getElementById('jobReqs');
+    const jobApply = document.getElementById('jobApply');
+    let lastFocus = null;
+
+    function openJob(id){
+      const job = JOBS.find(j => j.id === id); if (!job) return;
+      jobTitle.textContent = job.title;
+      jobSummary.textContent = job.summary;
+      jobReqs.innerHTML = job.requirements.map(r => `<li>${r}</li>`).join('');
+      jobApply.href = '#apply';
+      modal.classList.add('show');
+      lastFocus = document.activeElement;
+      closeModalBtn.focus();
+      // Escape closes
+      const onKey = (e)=>{ if(e.key === 'Escape'){ closeJob(); } };
+      modal.dataset.keyListener = 'true';
+      document.addEventListener('keydown', onKey, { once: true });
+    }
+    function closeJob(){
+      modal.classList.remove('show');
+      if (lastFocus) lastFocus.focus();
+    }
+    closeModalBtn.addEventListener('click', closeJob);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeJob(); });
+    carousel.addEventListener('click', (e)=>{
+      const btn = e.target.closest('[data-learn]');
+      if (!btn) return;
+      openJob(btn.getAttribute('data-learn'));
+    });
+
+    // ===== Carousel controls =====
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    function scrollByCards(dir = 1){
+      const card = carousel.querySelector('article');
+      if (!card) return;
+      const gap = 16; // 1rem
+      const shift = card.getBoundingClientRect().width + gap;
+      carousel.scrollBy({ left: dir * shift, behavior: 'smooth' });
+    }
+    prevBtn && prevBtn.addEventListener('click', ()=> scrollByCards(-1));
+    nextBtn && nextBtn.addEventListener('click', ()=> scrollByCards(1));
+
+    // Auto-advance every 6s (pauses on hover/focus)
+    let autoTimer = null;
+    function startAuto(){ autoTimer = setInterval(()=> scrollByCards(1), 6000); }
+    function stopAuto(){ if(autoTimer) clearInterval(autoTimer); autoTimer = null; }
+    startAuto();
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+    carousel.addEventListener('focusin', stopAuto);
+    carousel.addEventListener('focusout', startAuto);
+  </script>
+</body>
+</html>
