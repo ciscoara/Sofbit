@@ -26,32 +26,28 @@
                         radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.25), transparent 60%); }
     #progress { position: fixed; inset-inline: 0; top: 0; height: 4px; background: linear-gradient(90deg, #06b6d4, #a78bfa); transform-origin: 0 50%; z-index: 60; }
 
-    /* Floating orb motion */
     @keyframes floatOrb { 0%{transform:translateY(0) rotate(0deg) scale(1)} 50%{transform:translateY(-10px) rotate(2deg) scale(1.02)} 100%{transform:translateY(0) rotate(0deg) scale(1)} }
     .floating-orb { animation: floatOrb 9s ease-in-out infinite; }
 
-    /* Modern gradient avatars */
     .avatar { --s: 56px; width: var(--s); height: var(--s);
       border-radius: 18px; position: relative; overflow: hidden; box-shadow: 0 10px 25px rgba(2,6,23,.15);
       background: conic-gradient(from 210deg, #06b6d4, #8b5cf6, #06b6d4); }
     .avatar:after { content: ""; position: absolute; inset: 1px; border-radius: 16px;
       background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 40%), rgba(255,255,255,.08); }
 
-    /* Active link style for scroll-spy */
     nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; font-weight: 600; }
 
-    /* Carousel */
     .carousel { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 80%; gap: 1rem; padding-bottom: .5rem; }
     @media (min-width: 768px){ .carousel { grid-auto-columns: calc((100% - 2rem)/3); } }
     .carousel > article { scroll-snap-align: start; }
 
-    /* Modal backdrop */
     .modal-backdrop { position: fixed; inset: 0; background: rgba(2,6,23,.6); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 70; }
     .modal-backdrop.show { display: flex; }
   </style>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <div id="progress"></div>
+
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur glass border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
@@ -66,9 +62,10 @@
                class="h-12 w-auto" />
         </a>
         <nav class="hidden md:flex items-center gap-8 text-base">
-          <a href="#features" class="hover:opacity-80">Features</a>
-          <a href="#about" class="hover:opacity-80">About</a>
-          <a href="#jobs" class="hover:opacity-80">Open positions</a>
+          <a href="#features" class="hover:opacity-80">Edge</a>
+          <a href="#about" class="hover:opacity-80">Work</a>
+          <a href="#jobs" class="hover:opacity-80">Jobs</a>
+          <a href="#careers" class="hover:opacity-80">Apply</a>
           <a href="#contact" class="hover:opacity-80">Contact</a>
         </nav>
         <div class="flex items-center gap-2">
@@ -81,22 +78,20 @@
     <!-- Mobile nav -->
     <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
       <div class="px-4 py-3 space-y-2 text-base">
-        <a href="#features" class="block">Features</a>
-        <a href="#about" class="block">About</a>
-        <a href="#jobs" class="block">Open positions</a>
+        <a href="#features" class="block">Edge</a>
+        <a href="#about" class="block">Work</a>
+        <a href="#jobs" class="block">Jobs</a>
+        <a href="#careers" class="block">Apply</a>
         <a href="#contact" class="block">Contact</a>
         <a href="#book" data-calendly="open" class="block">Book a call</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero (left-aligned) -->
+  <!-- Hero -->
   <section id="home" class="relative overflow-hidden grad">
-    <!-- HERO PHOTO DROP ZONE -->
     <img src="assets/dtsantiago.jpg" alt="Santiago skyline" class="absolute inset-0 -z-20 w-full h-full object-cover opacity-55" />
-    <!-- Brand orb -->
     <img src="assets/sofbitavatar.png" alt="Sofbit abstract orb" class="absolute right-0 top-0 opacity-30 w-1/3 max-w-xs md:max-w-sm floating-orb -z-10" />
-    <!-- Soft overlay -->
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-white/60 to-white/80 dark:from-slate-950/80 dark:via-slate-900/70 dark:to-slate-950/85"></div>
 
     <div class="max-w-6xl mx-auto px-4 py-24 md:py-32">
@@ -104,24 +99,30 @@
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
           Chilean Code <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-violet-500">Elevating American Innovation</span>
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-slate-700 dark:text-slate-300">Your timezone. Your language. Our expertise.
-          Nearshore software engineering from Santiago and Viña del Mar. Bilingual senior developers, timezone-aligned with the U.S.</p>
+        <p class="mt-6 text-lg md:text-xl text-slate-700 dark:text-slate-300">
+          Your timezone. Your language. Our expertise.
+        </p>
+        <p class="mt-2 text-base md:text-lg text-slate-700 dark:text-slate-300">
+          Nearshore software engineering from Santiago and Viña del Mar. Senior bilingual developers, U.S. timezone-aligned.
+        </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#book" data-calendly="open" class="px-6 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium shadow hover:shadow-lg">Book a Call</a>
           <a href="#features" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Learn More</a>
         </div>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm md:text-base">We specialize in TypeScript/Node, React/Next, Python, .NET, Java, Swift, Kotlin, Android, iOS, and cloud platforms (AWS/Azure/GCP). We also offer expertise in LLM integration, prompt engineering, RAG systems, fine-tuning, and AI agent development. Engagements from staff augmentation to dedicated squads.</p>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm md:text-base">
+          Full-stack to AI: TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin. Cloud-native on AWS/Azure/GCP. LLM integration and intelligent agents. Staff augmentation to dedicated squads.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Value props -->
   <section id="features" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between mb-10">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold">Senior talent, seamless integration</h2>
-          <p class="mt-3 text-slate-600 dark:text-slate-300">We integrate into your team and deliver from day one.</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Clear value, no fluff</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">What you get when you work with us.</p>
         </div>
         <div class="hidden md:flex items-center gap-3">
           <div class="avatar" title="Engineer"></div>
@@ -129,37 +130,40 @@
           <div class="avatar" title="QA"></div>
         </div>
       </div>
+
       <div class="grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
-          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">👩‍💻</div>
-          <h3 class="font-semibold text-lg">Senior engineers on demand</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full-stack, mobile, and cloud specialists vetted for impact. Ramp in days, not months.</p>
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">⚡</div>
+          <h3 class="font-semibold text-lg">Senior engineers who hit the ground running</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Vetted full-stack, mobile, and cloud specialists. Days to productive, not months.</p>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
           <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🕑</div>
-          <h3 class="font-semibold text-lg">Timezone aligned (PT–ET)</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side-by-side with your team across North American hours for real-time collaboration.</p>
+          <h3 class="font-semibold text-lg">Real-time collaboration in your timezone</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side-by-side across North American hours. No overnight delays.</p>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
           <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🗣️</div>
-          <h3 class="font-semibold text-lg">Bilingual communication</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">English/Spanish fluent engineers, strong product sensibilities, and crisp async updates.</p>
+          <h3 class="font-semibold text-lg">Clear communication, zero friction</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Fluent English, strong product sense, and detailed async updates.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- Services / Process -->
   <section id="about" class="py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div class="reveal">
-        <h2 class="text-3xl md:text-4xl font-bold">Your nearshore product partner</h2>
-        <p class="mt-4 text-slate-600 dark:text-slate-300">From concept to scale, we integrate seamlessly into your workflow—sprint planning, code reviews, CI/CD pipelines—and deliver production-ready software that moves fast without breaking things.</p>
+        <h2 class="text-3xl md:text-4xl font-bold">Services & Process</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+          We plug into your existing workflow—Jira, GitHub, Slack, daily standups—and ship production-ready code fast.
+        </p>
         <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Flexible engagement:</strong> Staff augmentation to full dedicated squads</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Full-stack expertise:</strong> TypeScript/Node, React/Next, Python, .NET, Java, Go, Swift, Kotlin—plus LLM integration and AI</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Cloud-native:</strong> AWS, Azure, GCP with IaC, containerization, and observability built in</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Ship with confidence:</strong> Test-driven, security-first, performance-optimized</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Full-stack to AI:</strong> TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin.</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Cloud-native:</strong> AWS / Azure / GCP with IaC, containers, and observability.</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Intelligent systems:</strong> LLM integration and agents for real product impact.</span></li>
+          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Flexible engagement:</strong> Staff augmentation to dedicated squads.</span></li>
         </ul>
       </div>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-2 md:p-6 reveal">
@@ -168,13 +172,13 @@
     </div>
   </section>
 
-  <!-- OPEN POSITIONS (Carousel + Learn More modal) -->
+  <!-- OPEN POSITIONS -->
   <section id="jobs" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-end justify-between gap-4 mb-6">
         <div class="max-w-2xl">
           <h2 class="text-3xl md:text-4xl font-bold">Open positions</h2>
-          <p class="mt-3 text-slate-600 dark:text-slate-300">We’re always meeting great Chilean engineers. Browse roles and learn more.</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Join our team — senior engineers in Santiago and Viña del Mar.</p>
         </div>
         <div class="hidden md:flex items-center gap-2">
           <button id="prevBtn" class="rounded-xl border px-3 py-2 text-sm">← Prev</button>
@@ -185,8 +189,8 @@
     </div>
   </section>
 
-  <!-- We're hiring / Quick Apply (stylish card + icons) -->
-  <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+  <!-- Careers / Quick Apply -->
+  <section id="careers" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-8">
         <h2 class="text-3xl md:text-4xl font-bold">We're hiring</h2>
@@ -243,7 +247,7 @@
                              focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20">
                 <option>Senior Full-stack Engineer</option>
                 <option>Mobile Engineer</option>
-                <option>Data Modeler</option>
+                <option>AI Data Curator</option>
                 <option>DevOps / SRE</option>
                 <option>Other</option>
               </select>
@@ -281,14 +285,59 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact CTA (modal trigger) -->
   <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold">Get in touch</h2>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">Questions, staffing needs, or project ideas—drop us a line.</p>
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Get in touch</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Questions, staffing needs, or project ideas—send us a message.</p>
+      <button id="openContact" class="mt-6 inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 font-medium shadow hover:shadow-lg">
+        Contact us / Send a message
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img
+          id="footerLogo"
+          src="assets/sofbitavatar.png"
+          data-light="assets/sofbitavatar.png"
+          data-dark="assets/sofbitavatar_white.png"
+          alt="Sofbit logo"
+          class="h-8"
+        />
+        <span class="text-sm text-slate-500">Sofbit SpA — Vitacura, Santiago Chile</span>
       </div>
-      <form method="POST" action="https://formspree.io/f/mvgvjbjn" class="grid gap-4 reveal">
+      <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal: Job details -->
+  <div id="jobModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="jobTitle">
+    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
+      <div class="flex items-start justify-between gap-4">
+        <h3 id="jobTitle" class="text-xl md:text-2xl font-bold">Job title</h3>
+        <button id="closeModal" class="rounded-xl border px-3 py-2 text-sm">Close</button>
+      </div>
+      <p id="jobSummary" class="mt-3 text-slate-600 dark:text-slate-300"></p>
+      <h4 class="mt-5 font-semibold">Requirements</h4>
+      <ul id="jobReqs" class="list-disc pl-5 mt-2 text-slate-700 dark:text-slate-300"></ul>
+      <div class="mt-6 flex items-center justify-end gap-3">
+        <a id="jobApply" href="#apply" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2">Apply</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Contact form -->
+  <div id="contactModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
+      <div class="flex items-start justify-between gap-4">
+        <h3 id="contactTitle" class="text-xl md:text-2xl font-bold">Send us a message</h3>
+        <button id="closeContact" class="rounded-xl border px-3 py-2 text-sm">Close</button>
+      </div>
+      <form method="POST" action="https://formspree.io/f/mvgvjbjn" class="grid gap-4 mt-4">
         <div class="grid md:grid-cols-2 gap-4">
           <label class="grid gap-1 text-sm">
             <span class="font-medium">Name</span>
@@ -328,40 +377,6 @@
           </button>
         </div>
       </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-12 border-t border-slate-200/70 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <img
-          id="footerLogo"
-          src="assets/sofbitavatar.png"
-          data-light="assets/sofbitavatar.png"
-          data-dark="assets/sofbitavatar_white.png"
-          alt="Sofbit logo"
-          class="h-8"
-        />
-        <span class="text-sm text-slate-500">Sofbit SpA — Vitacura, Santiago Chile</span>
-      </div>
-      <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Modal for job details -->
-  <div id="jobModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="jobTitle">
-    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
-      <div class="flex items-start justify-between gap-4">
-        <h3 id="jobTitle" class="text-xl md:text-2xl font-bold">Job title</h3>
-        <button id="closeModal" class="rounded-xl border px-3 py-2 text-sm">Close</button>
-      </div>
-      <p id="jobSummary" class="mt-3 text-slate-600 dark:text-slate-300"></p>
-      <h4 class="mt-5 font-semibold">Requirements</h4>
-      <ul id="jobReqs" class="list-disc pl-5 mt-2 text-slate-700 dark:text-slate-300"></ul>
-      <div class="mt-6 flex items-center justify-end gap-3">
-        <a id="jobApply" href="#apply" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2">Apply</a>
-      </div>
     </div>
   </div>
 
@@ -441,22 +456,20 @@
       });
     });
 
-      // Clean URL if the page was opened with a hash (direct link)
-  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-
-// Intercept ALL in-page hash links and keep clean URLs
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    const id = href.slice(1);
-    const target = document.getElementById(id);
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // make sure no hash is added
-    history.replaceState(null, '', location.pathname + location.search);
-  });
-});
+    // Clean URL if opened with a hash
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    // Intercept in-page hash links and keep clean URLs
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        const id = href.slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', location.pathname + location.search);
+      });
+    });
 
     // ===== Jobs Data =====
     const JOBS = [
@@ -515,25 +528,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       }
     ];
 
-    // Render carousel slides
+    // Render carousel slides (cards are fully clickable)
     const carousel = document.getElementById('jobsCarousel');
     function renderSlides() {
       carousel.innerHTML = '';
       JOBS.forEach(job => {
         const el = document.createElement('article');
-        el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950';
+        el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950 cursor-pointer focus:outline-none focus:ring-4 ring-cyan-500/20';
+        el.setAttribute('data-id', job.id);
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
         el.innerHTML = `
           <h3 class="font-semibold">${job.title}</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">${job.tags.join(' · ')}</p>
           <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">${job.summary}</p>
-          <button data-learn="${job.id}" class="mt-4 inline-flex rounded-xl border px-3 py-2 text-sm">Learn more</button>
+          <span class="mt-4 inline-flex rounded-xl border px-3 py-2 text-sm">Learn more</span>
         `;
         carousel.appendChild(el);
       });
     }
     renderSlides();
 
-    // Modal logic
+    // Job Modal logic
     const modal = document.getElementById('jobModal');
     const closeModalBtn = document.getElementById('closeModal');
     const jobTitle = document.getElementById('jobTitle');
@@ -560,13 +576,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
     closeModalBtn.addEventListener('click', closeJob);
     modal.addEventListener('click', (e)=>{ if(e.target === modal) closeJob(); });
+
+    // Open job from card (click or Enter)
     carousel.addEventListener('click', (e)=>{
-      const btn = e.target.closest('[data-learn]');
-      if (!btn) return;
-      openJob(btn.getAttribute('data-learn'));
+      const card = e.target.closest('article[data-id]');
+      if (!card) return;
+      openJob(card.getAttribute('data-id'));
+    });
+    carousel.addEventListener('keydown', (e)=>{
+      const card = e.target.closest('article[data-id]');
+      if (!card) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openJob(card.getAttribute('data-id'));
+      }
     });
 
-    // Carousel controls
+    // Carousel controls (manual only; no auto-scroll)
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     function scrollByCards(dir = 1){
@@ -578,16 +604,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
     prevBtn && prevBtn.addEventListener('click', ()=> scrollByCards(-1));
     nextBtn && nextBtn.addEventListener('click', ()=> scrollByCards(1));
+    // NOTE: Auto-advance removed per request (no auto scrolling)
 
-    // Auto-advance
-    let autoTimer = null;
-    function startAuto(){ autoTimer = setInterval(()=> scrollByCards(1), 6000); }
-    function stopAuto(){ if(autoTimer) clearInterval(autoTimer); autoTimer = null; }
-    startAuto();
-    carousel.addEventListener('mouseenter', stopAuto);
-    carousel.addEventListener('mouseleave', startAuto);
-    carousel.addEventListener('focusin', stopAuto);
-    carousel.addEventListener('focusout', startAuto);
+    // Contact modal
+    const contactModal = document.getElementById('contactModal');
+    const openContact = document.getElementById('openContact');
+    const closeContact = document.getElementById('closeContact');
+    let lastFocusContact = null;
+
+    function openContactModal(){
+      contactModal.classList.add('show');
+      lastFocusContact = document.activeElement;
+      closeContact.focus();
+      const onKey = (e)=>{ if(e.key === 'Escape'){ closeContactModal(); } };
+      document.addEventListener('keydown', onKey, { once: true });
+    }
+    function closeContactModal(){
+      contactModal.classList.remove('show');
+      if (lastFocusContact) lastFocusContact.focus();
+    }
+    openContact.addEventListener('click', openContactModal);
+    closeContact.addEventListener('click', closeContactModal);
+    contactModal.addEventListener('click', (e)=>{ if(e.target === contactModal) closeContactModal(); });
   </script>
 </body>
 </html>
