@@ -1,444 +1,238 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-<head>
-<title>Sofbit</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("./images/dtsantiago.jpg");
-  min-height: 100%;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-/* Navbar Logo Styling */
-#myNavbar img {
-  height: 50px;
-}
-
-/* Tagline styling */
-.tagline {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 3vw; /* Responsive font size */
-  text-shadow: 2px 2px 4px #0b0b0b;
-  margin-top: 20px;
-}
-
-/* Logo image responsiveness */
-.logoim img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .tagline {
-    font-size: 25px; /* Adjusted for smaller screens */
-    width: 100%;
-  text-wrap: auto;
-  margin: 5px;
-  
-  }
-  #myNavbar img {
-    height: 35px;
-  }
-
-  .logoim img  {
-    width: 380px;
-    /* padding: auto; */
-    height: auto;
-    margin-top: auto;
-    
-  }
-
-.map {
-
-  width: 100%;
-  height: Auto;
-}
-
-
-}
-</style>
-</head>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-wide"><img src="images/sofbitcropped.png" alt="Logo1"></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace with menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
-  <div class="logoim w3-display-middle w3-center">
-    <img src="images/sofbitcropped.png" alt="Logo">
-    <div class="tagline">Chilean Code, Elevating American Innovation.</div>
-  </div> 
-</header>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Work with Us. Send us a message:</p>
-  <div style="margin-top:48px">
-    <form action="https://formspree.io/f/xkgngvgq" method="POST">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-    <br>
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Vitacura, Santiago, Chile</p>
-    <br>
-    <!-- Map Image with reduced height -->
-    <img class = "map" src="images/citymap.png" style="max-width: 100%; height: auto; display: block; margin: 20px auto 0; height: 50%;">
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a title="W3.CSS" target="_blank">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Sidebar toggle functions
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  mySidebar.style.display = mySidebar.style.display === 'block' ? 'none' : 'block';
-}
-
-function w3_close() {
-  mySidebar.style.display = "none";
-}
-</script>
-
-=======
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sofbit — Chilean Code, Elevating American Innovation</title>
-  <meta name="description" content="Sofbit SpA provides nearshore software engineering from Vitacura, Santiago Chile. Chilean code powering American innovation and support." />
-  <meta property="og:title" content="Sofbit — Chilean Code, Elevating American Innovation" />
-  <meta property="og:description" content="Sofbit SpA out of Vitacura, Santiago Chile, delivers top-tier nearshore development talent supporting U.S. innovation and digital growth." />
+  <title data-i18n="__title__">Sofbit — Código chileno, impacto global</title>
+  <meta name="description" data-i18n-attr="content:__description__" content="Sofbit SpA ofrece ingeniería de software nearshore desde Vitacura, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo." />
+  <meta property="og:title" data-i18n-attr="content:__title__" content="Sofbit — Código chileno, impacto global" />
+  <meta property="og:description" data-i18n-attr="content:__description__" content="Sofbit SpA, desde Vitacura, Santiago de Chile, entrega talento de desarrollo nearshore de primer nivel para impulsar la innovación y el crecimiento digital en Latinoamérica y el mundo." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/sofbittransparent11.png" />
   <link rel="icon" href="assets/favicon.ico" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } }
+    };
+  </script>
   <style>
     html { scroll-behavior: smooth; }
-    .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #06b6d4, #a78bfa);
-      background-size: 0 2px, 100% 2px; background-position: 0 100%, 0 100%; background-repeat: no-repeat; transition: background-size .2s ease; }
-    .link-underline:hover { background-size: 100% 2px, 100% 2px; }
-    .glass { backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,.55)); }
-    .dark .glass { background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(2,6,23,.5)); }
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .6s ease; }
+    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    .eyebrow { letter-spacing: .12em; }
+    .link-underline {
+      background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #4f46e5, #4f46e5);
+      background-size: 0 1px, 100% 1px; background-position: 0 100%, 0 100%; background-repeat: no-repeat;
+      transition: background-size .2s ease;
+    }
+    .link-underline:hover { background-size: 100% 1px, 100% 1px; }
+    .reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
     .reveal.show { opacity: 1; transform: translateY(0); }
-    .grad { background: radial-gradient(1200px 600px at 10% 10%, rgba(34,211,238,.25), transparent 60%),
-                        radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.25), transparent 60%); }
-    #progress { position: fixed; inset-inline: 0; top: 0; height: 4px; background: linear-gradient(90deg, #06b6d4, #a78bfa); transform-origin: 0 50%; z-index: 60; }
+    #progress { position: fixed; inset-inline: 0; top: 0; height: 3px; background: #4f46e5; transform-origin: 0 50%; z-index: 60; }
+    nav a[aria-current="page"] { color: #4f46e5; }
+    .dark nav a[aria-current="page"] { color: #818cf8; }
 
-    @keyframes floatOrb { 0%{transform:translateY(0) rotate(0deg) scale(1)} 50%{transform:translateY(-10px) rotate(2deg) scale(1.02)} 100%{transform:translateY(0) rotate(0deg) scale(1)} }
-    .floating-orb { animation: floatOrb 9s ease-in-out infinite; }
-
-    .avatar { --s: 56px; width: var(--s); height: var(--s);
-      border-radius: 18px; position: relative; overflow: hidden; box-shadow: 0 10px 25px rgba(2,6,23,.15);
-      background: conic-gradient(from 210deg, #06b6d4, #8b5cf6, #06b6d4); }
-    .avatar:after { content: ""; position: absolute; inset: 1px; border-radius: 16px;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 40%), rgba(255,255,255,.08); }
-
-    nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; font-weight: 600; }
-
-    .carousel { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 80%; gap: 1rem; padding-bottom: .5rem; }
-    @media (min-width: 768px){ .carousel { grid-auto-columns: calc((100% - 2rem)/3); } }
+    .carousel { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 88%; gap: 1rem; padding-bottom: .5rem; }
+    @media (min-width: 768px) { .carousel { grid-auto-columns: calc((100% - 2rem) / 3); } }
     .carousel > article { scroll-snap-align: start; }
 
-    .modal-backdrop { position: fixed; inset: 0; background: rgba(2,6,23,.6); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 70; }
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,.55); display: none; align-items: center; justify-content: center; z-index: 70; padding: 1rem; }
     .modal-backdrop.show { display: flex; }
   </style>
 </head>
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
   <div id="progress"></div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur glass border-b border-slate-200/60 dark:border-slate-800">
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex h-20 items-center justify-between">
-        <a href="/" class="flex items-center gap-3 font-extrabold text-2xl">
-          <span class="text-slate-800 dark:text-white tracking-tight">Sofbit</span>
-          <img id="brandLogo"
-               src="assets/sofbitavatar.png"
-               data-light="assets/sofbitavatar.png"
-               data-dark="assets/sofbittransparent11.png"
-               alt="Sofbit logo"
-               class="h-12 w-auto" />
+        <a href="/" class="flex items-center gap-3 font-bold text-xl">
+          <img id="brandLogo" src="assets/sofbitavatar.png" data-light="assets/sofbitavatar.png" data-dark="assets/sofbitavatar_white.png" alt="Logo de Sofbit" class="h-10 w-auto" />
+          <span class="text-slate-900 dark:text-white tracking-tight">Sofbit</span>
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-base">
-          <a href="#features" class="hover:opacity-80">Edge</a>
-          <a href="#about" class="hover:opacity-80">Work</a>
-          <a href="#jobs" class="hover:opacity-80">Jobs</a>
-          <a href="#careers" class="hover:opacity-80">Apply</a>
-          <a href="#contact" class="hover:opacity-80">Contact</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#features" data-i18n="nav.edge" class="hover:text-slate-900 dark:hover:text-white">Ventajas</a>
+          <a href="#about" data-i18n="nav.work" class="hover:text-slate-900 dark:hover:text-white">Servicios</a>
+          <a href="#jobs" data-i18n="nav.jobs" class="hover:text-slate-900 dark:hover:text-white">Empleos</a>
+          <a href="#careers" data-i18n="nav.apply" class="hover:text-slate-900 dark:hover:text-white">Postular</a>
+          <a href="#contact" data-i18n="nav.contact" class="hover:text-slate-900 dark:hover:text-white">Contacto</a>
         </nav>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" aria-label="Toggle dark mode" class="hidden md:inline-flex rounded-xl px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">🌙</button>
-          <a href="#book" data-calendly="open" class="hidden md:inline-flex items-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 text-sm font-semibold shadow hover:shadow-md">Book a call</a>
-          <button id="menuBtn" class="md:hidden rounded-xl border px-3 py-2 text-sm">Menu</button>
+          <button data-lang-btn class="hidden md:inline-flex items-center rounded-lg px-3 py-2 text-xs font-semibold border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900" aria-label="Cambiar idioma">EN</button>
+          <button data-theme-toggle aria-label="Cambiar modo oscuro" class="hidden md:inline-flex rounded-lg px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900">🌙</button>
+          <a href="#book" data-calendly="open" data-i18n="cta.book" class="hidden md:inline-flex items-center rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2.5 text-sm font-semibold hover:opacity-90">Agendar una llamada</a>
+          <button id="menuBtn" data-i18n="nav.menu" class="md:hidden rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm">Menú</button>
         </div>
       </div>
     </div>
     <!-- Mobile nav -->
     <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
-      <div class="px-4 py-3 space-y-2 text-base">
-        <a href="#features" class="block">Edge</a>
-        <a href="#about" class="block">Work</a>
-        <a href="#jobs" class="block">Jobs</a>
-        <a href="#careers" class="block">Apply</a>
-        <a href="#contact" class="block">Contact</a>
-        <a href="#book" data-calendly="open" class="block">Book a call</a>
+      <div class="px-4 py-3 space-y-2 text-sm">
+        <a href="#features" data-i18n="nav.edge" class="block py-1">Ventajas</a>
+        <a href="#about" data-i18n="nav.work" class="block py-1">Servicios</a>
+        <a href="#jobs" data-i18n="nav.jobs" class="block py-1">Empleos</a>
+        <a href="#careers" data-i18n="nav.apply" class="block py-1">Postular</a>
+        <a href="#contact" data-i18n="nav.contact" class="block py-1">Contacto</a>
+        <a href="#book" data-calendly="open" data-i18n="cta.book" class="block py-1 font-semibold">Agendar una llamada</a>
+        <div class="flex items-center gap-2 pt-2">
+          <button data-lang-btn class="rounded-lg px-3 py-2 text-xs font-semibold border border-slate-300 dark:border-slate-700" aria-label="Cambiar idioma">EN</button>
+          <button data-theme-toggle aria-label="Cambiar modo oscuro" class="rounded-lg px-3 py-2 text-sm border border-slate-300 dark:border-slate-700">🌙</button>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative overflow-hidden grad">
-    <img src="assets/dtsantiago.jpg" alt="Santiago skyline" class="absolute inset-0 -z-20 w-full h-full object-cover opacity-55" />
-    <img src="assets/sofbitavatar.png" alt="Sofbit abstract orb" class="absolute right-0 top-0 opacity-30 w-1/3 max-w-xs md:max-w-sm floating-orb -z-10" />
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-white/60 to-white/80 dark:from-slate-950/80 dark:via-slate-900/70 dark:to-slate-950/85"></div>
-
-    <div class="max-w-6xl mx-auto px-4 py-24 md:py-32">
-      <div class="max-w-2xl md:max-w-3xl reveal">
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-          Chilean Code <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-violet-500">Elevating American Innovation</span>
+  <section id="home" class="border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="reveal">
+        <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="hero.eyebrow">Ingeniería de software nearshore</p>
+        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
+          <span data-i18n="hero.title1">Código chileno,</span>
+          <span class="block text-indigo-600 dark:text-indigo-400" data-i18n="hero.title2">para Latinoamérica y el mundo.</span>
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-slate-700 dark:text-slate-300">
-          Your timezone. Your language. Our expertise.
-        </p>
-        <p class="mt-2 text-base md:text-lg text-slate-700 dark:text-slate-300">
-          Nearshore software engineering from Santiago and Viña del Mar. Senior bilingual developers, U.S. timezone-aligned.
-        </p>
+        <p class="mt-6 text-lg text-slate-700 dark:text-slate-300" data-i18n="hero.sub1">Tu huso horario. Tu idioma. Nuestra experiencia.</p>
+        <p class="mt-2 text-base text-slate-600 dark:text-slate-400" data-i18n="hero.sub2">Ingeniería de software nearshore desde Santiago y Viña del Mar. Desarrolladores senior bilingües, con cobertura horaria para Latinoamérica y clientes globales.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#book" data-calendly="open" class="px-6 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium shadow hover:shadow-lg">Book a Call</a>
-          <a href="#features" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Learn More</a>
+          <a href="#book" data-calendly="open" data-i18n="hero.cta1" class="px-6 py-3 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold text-center hover:opacity-90">Agendar una llamada</a>
+          <a href="#features" data-i18n="hero.cta2" class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 text-center hover:bg-slate-50 dark:hover:bg-slate-900">Conocer más</a>
         </div>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm md:text-base">
-          Full-stack to AI: TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin. Cloud-native on AWS/Azure/GCP. LLM integration and intelligent agents. Staff augmentation to dedicated squads.
-        </p>
+        <p class="mt-6 text-sm text-slate-500 dark:text-slate-400" data-i18n="hero.stack">De full-stack a IA: TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin. Cloud-native en AWS/Azure/GCP. Integración de LLM y agentes inteligentes. Desde aumento de personal hasta equipos dedicados.</p>
+      </div>
+      <div class="reveal">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+          <img src="assets/dtsantiago.jpg" data-i18n-attr="alt:hero.imgAlt" alt="Skyline de Santiago de Chile" class="w-full h-72 md:h-96 object-cover" />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Value props -->
-  <section id="features" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+  <section id="features" class="py-20 md:py-28 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between mb-10">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold">Clear value, no fluff</h2>
-          <p class="mt-3 text-slate-600 dark:text-slate-300">What you get when you work with us.</p>
-        </div>
-        <div class="hidden md:flex items-center gap-3">
-          <div class="avatar" title="Engineer"></div>
-          <div class="avatar" title="Tech Lead" style="--s:64px"></div>
-          <div class="avatar" title="QA"></div>
-        </div>
-      </div>
+      <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="features.eyebrow">Por qué Sofbit</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight" data-i18n="features.title">Ventajas claras, sin relleno</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-xl" data-i18n="features.sub">Esto es lo que obtienes al trabajar con nosotros.</p>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
-          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">⚡</div>
-          <h3 class="font-semibold text-lg">Senior engineers who hit the ground running</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Vetted full-stack, mobile, and cloud specialists. Days to productive, not months.</p>
+      <div class="mt-12 grid md:grid-cols-3 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+        <div class="bg-white dark:bg-slate-950 p-8 reveal">
+          <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">01</span>
+          <h3 class="mt-3 font-semibold text-lg" data-i18n="features.card1.title">Ingenieros senior listos desde el día uno</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400" data-i18n="features.card1.body">Especialistas full-stack, mobile y cloud, rigurosamente evaluados. De días a productivos, no meses.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
-          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🕑</div>
-          <h3 class="font-semibold text-lg">Real-time collaboration in your timezone</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Work side-by-side across North American hours. No overnight delays.</p>
+        <div class="bg-white dark:bg-slate-950 p-8 reveal">
+          <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">02</span>
+          <h3 class="mt-3 font-semibold text-lg" data-i18n="features.card2.title">Colaboración en tiempo real, en tu huso horario</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400" data-i18n="features.card2.body">Trabajamos codo a codo con equipos en Latinoamérica y clientes globales. Sin demoras de un día para otro.</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm glass reveal">
-          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white flex items-center justify-center mb-4">🗣️</div>
-          <h3 class="font-semibold text-lg">Clear communication, zero friction</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Fluent English, strong product sense, and detailed async updates.</p>
+        <div class="bg-white dark:bg-slate-950 p-8 reveal">
+          <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">03</span>
+          <h3 class="mt-3 font-semibold text-lg" data-i18n="features.card3.title">Comunicación clara, sin fricción</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400" data-i18n="features.card3.body">Inglés fluido, buen criterio de producto y actualizaciones asíncronas detalladas.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services / Process -->
-  <section id="about" class="py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+  <section id="about" class="py-20 md:py-28 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
       <div class="reveal">
-        <h2 class="text-3xl md:text-4xl font-bold">Services & Process</h2>
-        <p class="mt-4 text-slate-600 dark:text-slate-300">
-          We plug into your existing workflow—Jira, GitHub, Slack, daily standups—and ship production-ready code fast.
-        </p>
-        <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Full-stack to AI:</strong> TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin.</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Cloud-native:</strong> AWS / Azure / GCP with IaC, containers, and observability.</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Intelligent systems:</strong> LLM integration and agents for real product impact.</span></li>
-          <li class="flex items-start"><span class="mr-2">•</span><span><strong>Flexible engagement:</strong> Staff augmentation to dedicated squads.</span></li>
+        <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="about.eyebrow">Cómo trabajamos</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight" data-i18n="about.title">Servicios y proceso</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400" data-i18n="about.body">Nos integramos a tu flujo de trabajo actual —Jira, GitHub, Slack, daily standups— y entregamos código listo para producción, rápido.</p>
+        <ul class="mt-6 space-y-4 text-slate-700 dark:text-slate-300 text-sm">
+          <li class="flex gap-3"><span class="text-indigo-600 dark:text-indigo-400 font-bold">—</span><span data-i18n-html="about.li1"><strong>De full-stack a IA:</strong> TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin.</span></li>
+          <li class="flex gap-3"><span class="text-indigo-600 dark:text-indigo-400 font-bold">—</span><span data-i18n-html="about.li2"><strong>Cloud-native:</strong> AWS / Azure / GCP con IaC, contenedores y observabilidad.</span></li>
+          <li class="flex gap-3"><span class="text-indigo-600 dark:text-indigo-400 font-bold">—</span><span data-i18n-html="about.li3"><strong>Sistemas inteligentes:</strong> integración de LLM y agentes con impacto real en el producto.</span></li>
+          <li class="flex gap-3"><span class="text-indigo-600 dark:text-indigo-400 font-bold">—</span><span data-i18n-html="about.li4"><strong>Modalidad flexible:</strong> desde aumento de personal hasta equipos dedicados.</span></li>
         </ul>
       </div>
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-2 md:p-6 reveal">
-        <img src="assets/citymap.png" alt="WeWork Manquehue / Vitacura" class="rounded-xl shadow-lg w-full object-cover" />
+      <div class="reveal rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+        <img src="assets/vina.jpg" data-i18n-attr="alt:about.imgAlt" alt="Viña del Mar, Chile" class="w-full h-72 md:h-96 object-cover" />
       </div>
     </div>
   </section>
 
   <!-- OPEN POSITIONS -->
-  <section id="jobs" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800">
+  <section id="jobs" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-end justify-between gap-4 mb-6">
+      <div class="flex items-end justify-between gap-4 mb-8">
         <div class="max-w-2xl">
-          <h2 class="text-3xl md:text-4xl font-bold">Open positions</h2>
-          <p class="mt-3 text-slate-600 dark:text-slate-300">Join our team — senior engineers in Santiago and Viña del Mar.</p>
+          <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="jobs.eyebrow">Únete al equipo</p>
+          <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight" data-i18n="jobs.title">Vacantes abiertas</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-400" data-i18n="jobs.sub">Súmate a nuestro equipo — ingenieros senior en Santiago y Viña del Mar.</p>
         </div>
         <div class="hidden md:flex items-center gap-2">
-          <button id="prevBtn" class="rounded-xl border px-3 py-2 text-sm">← Prev</button>
-          <button id="nextBtn" class="rounded-xl border px-3 py-2 text-sm">Next →</button>
+          <button id="prevBtn" data-i18n="jobs.prev" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm">← Anterior</button>
+          <button id="nextBtn" data-i18n="jobs.next" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm">Siguiente →</button>
         </div>
       </div>
-      <div id="jobsCarousel" class="carousel" aria-label="Job openings carousel"></div>
+      <div id="jobsCarousel" class="carousel" aria-label="Carrusel de vacantes"></div>
     </div>
   </section>
 
   <!-- Careers / Quick Apply -->
-  <section id="careers" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+  <section id="careers" class="py-20 md:py-28 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold">We're hiring</h2>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">Looking for your next opportunity? We'd love to hear from you.</p>
+      <div class="text-center mb-10">
+        <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="careers.eyebrow">Talento</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight" data-i18n="careers.title">Estamos contratando</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400" data-i18n="careers.sub">¿Buscas tu próxima oportunidad? Nos encantaría saber de ti.</p>
       </div>
 
-      <form id="apply" method="POST" action="https://formspree.io/f/mgvpjljq"
-            class="mt-10 mx-auto max-w-3xl bg-gradient-to-r from-cyan-500/30 via-transparent to-violet-500/30 p-[1px] rounded-3xl">
-        <div class="rounded-3xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800/70 p-6 md:p-8 shadow-sm">
-          <div class="grid md:grid-cols-2 gap-4">
-            <label class="grid gap-1 text-sm">
-              <span class="font-medium">Full name</span>
-              <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2">👤</span>
-                <input name="name" required
-                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                              focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
-              </div>
-            </label>
-            <label class="grid gap-1 text-sm">
-              <span class="font-medium">Email</span>
-              <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2">✉️</span>
-                <input type="email" name="email" required
-                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                              focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
-              </div>
-            </label>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-4 mt-4">
-            <label class="grid gap-1 text-sm">
-              <span class="font-medium">LinkedIn</span>
-              <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2">🔗</span>
-                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/…"
-                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                              focus:outline-none focus:ring-4 ring-violet-500/20 dark:ring-violet-400/20" />
-              </div>
-            </label>
-            <label class="grid gap-1 text-sm">
-              <span class="font-medium">GitHub</span>
-              <div class="relative">
-                <span class="absolute left-3 top-1/2 -translate-y-1/2">💻</span>
-                <input type="url" name="github" placeholder="https://github.com/…"
-                       class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                              focus:outline-none focus:ring-4 ring-violet-500/20 dark:ring-violet-400/20" />
-              </div>
-            </label>
-            <label class="grid gap-1 text-sm">
-              <span class="font-medium">Role</span>
-              <select name="role"
-                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2
-                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20">
-                <option>Senior Full-stack Engineer</option>
-                <option>Mobile Engineer</option>
-                <option>AI Data Curator</option>
-                <option>DevOps / SRE</option>
-                <option>Other</option>
-              </select>
-            </label>
-          </div>
-
-          <label class="grid gap-1 text-sm mt-4">
-            <span class="font-medium">Notes (optional)</span>
-            <textarea name="notes" rows="4"
-                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2
-                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20"
-                      placeholder="Links, availability, portfolio…"></textarea>
+      <form id="apply" method="POST" action="https://formspree.io/f/mgvpjljq" class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm bg-white dark:bg-slate-950">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium" data-i18n="form.name">Nombre completo</span>
+            <input name="Name" required class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
           </label>
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium" data-i18n="form.email">Correo electrónico</span>
+            <input type="email" name="Email" required class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
+          </label>
+        </div>
 
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
-            <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
-              <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
-              I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
-            </label>
-            <button class="inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900
-                           px-5 py-3 font-medium shadow hover:shadow-lg">
-              Submit <span aria-hidden>→</span>
-            </button>
-          </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium">LinkedIn</span>
+            <input type="url" name="LinkedIn" placeholder="https://linkedin.com/in/…" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
+          </label>
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium">GitHub</span>
+            <input type="url" name="GitHub" placeholder="https://github.com/…" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
+          </label>
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium" data-i18n="form.role">Rol</span>
+            <select name="Role" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40">
+              <option data-i18n="form.role.fullstack">Ingeniero(a) Full-stack Senior</option>
+              <option data-i18n="form.role.mobile">Ingeniero(a) Mobile</option>
+              <option data-i18n="form.role.curator">Curador(a) de Datos de IA</option>
+              <option data-i18n="form.role.sre">DevOps / SRE</option>
+              <option data-i18n="form.role.other">Otro</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="grid gap-1.5 text-sm mt-4">
+          <span class="font-medium" data-i18n="form.notes">Notas (opcional)</span>
+          <textarea name="Notes" rows="4" data-i18n-placeholder="form.notes.placeholder" placeholder="Enlaces, disponibilidad, portafolio…" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40"></textarea>
+        </label>
+
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+            <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
+            <span data-i18n-html="form.privacy">Acepto la <a href="privacy.html" class="link-underline">política de privacidad</a>.</span>
+          </label>
+          <button type="submit" class="inline-flex justify-center items-center gap-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 font-semibold hover:opacity-90">
+            <span data-i18n="form.submit">Enviar</span> <span aria-hidden>→</span>
+          </button>
         </div>
       </form>
     </div>
@@ -446,101 +240,89 @@ function w3_close() {
 
   <!-- Pre-footer banner -->
   <section class="relative h-64 overflow-hidden">
-    <img src="assets/vina.jpg" alt="Santiago & Andes" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-slate-900/45 flex items-center justify-center">
-      <p class="text-white text-xl md:text-2xl font-semibold">Chilean Code. Global Impact.</p>
+    <img src="assets/nightsantiago.jpeg" data-i18n-attr="alt:banner.imgAlt" alt="Santiago de noche" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-slate-900/55 flex items-center justify-center">
+      <p class="text-white text-xl md:text-2xl font-semibold text-center px-4" data-i18n="banner.text">Código chileno. Impacto global.</p>
     </div>
   </section>
 
   <!-- Contact CTA (modal trigger) -->
-  <section id="contact" class="py-20 md:py-28 border-t border-slate-200/70 dark:border-slate-800">
+  <section id="contact" class="py-20 md:py-28 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">Get in touch</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Questions, staffing needs, or project ideas—send us a message.</p>
-      <button id="openContact" class="mt-6 inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 font-medium shadow hover:shadow-lg">
-        Contact us / Send a message
+      <p class="eyebrow text-xs font-semibold uppercase text-indigo-600 dark:text-indigo-400" data-i18n="contact.eyebrow">Contacto</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight" data-i18n="contact.title">Hablemos</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400" data-i18n="contact.sub">¿Preguntas, necesidades de staffing o ideas de proyecto? Envíanos un mensaje.</p>
+      <button id="openContact" data-i18n="contact.cta" class="mt-6 inline-flex justify-center items-center gap-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 font-semibold hover:opacity-90">
+        Contáctanos / Enviar mensaje
       </button>
+
+      <div class="mt-14 grid md:grid-cols-2 gap-8 items-center text-left">
+        <div>
+          <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="contact.address">📍 Vitacura, Santiago, Chile</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+          <img src="assets/citymap.png" data-i18n-attr="alt:contact.mapAlt" alt="Mapa de Vitacura, Santiago" class="w-full h-auto" />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-slate-200/70 dark:border-slate-800">
+  <footer class="py-12">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img
-          id="footerLogo"
-          src="assets/sofbitavatar.png"
-          data-light="assets/sofbitavatar.png"
-          data-dark="assets/sofbitavatar_white.png"
-          alt="Sofbit logo"
-          class="h-8"
-        />
-        <span class="text-sm text-slate-500">Sofbit SpA — Vitacura, Santiago Chile</span>
+        <img id="footerLogo" src="assets/sofbitavatar.png" data-light="assets/sofbitavatar.png" data-dark="assets/sofbitavatar_white.png" alt="Logo de Sofbit" class="h-7" />
+        <span class="text-sm text-slate-500" data-i18n="footer.location">Sofbit SpA — Vitacura, Santiago de Chile · Santiago y Viña del Mar</span>
       </div>
-      <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. All rights reserved.</p>
+      <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. <span data-i18n="footer.rightsSuffix">Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
   <!-- Modal: Job details -->
   <div id="jobModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="jobTitle">
-    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
+    <div class="max-w-2xl w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
       <div class="flex items-start justify-between gap-4">
         <h3 id="jobTitle" class="text-xl md:text-2xl font-bold">Job title</h3>
-        <button id="closeModal" class="rounded-xl border px-3 py-2 text-sm">Close</button>
+        <button id="closeModal" data-i18n="modal.close" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm shrink-0">Cerrar</button>
       </div>
-      <p id="jobSummary" class="mt-3 text-slate-600 dark:text-slate-300"></p>
-      <h4 class="mt-5 font-semibold">Requirements</h4>
-      <ul id="jobReqs" class="list-disc pl-5 mt-2 text-slate-700 dark:text-slate-300"></ul>
+      <p id="jobSummary" class="mt-3 text-slate-600 dark:text-slate-400"></p>
+      <h4 class="mt-5 font-semibold" data-i18n="modal.requirements">Requisitos</h4>
+      <ul id="jobReqs" class="list-disc pl-5 mt-2 text-slate-700 dark:text-slate-300 text-sm space-y-1"></ul>
       <div class="mt-6 flex items-center justify-end gap-3">
-        <a id="jobApply" href="#apply" class="rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2">Apply</a>
+        <a id="jobApply" href="#apply" data-i18n="modal.apply" class="rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2 font-semibold">Postular</a>
       </div>
     </div>
   </div>
 
   <!-- Modal: Contact form -->
   <div id="contactModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <div class="max-w-2xl w-[92%] md:w-3/4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
+    <div class="max-w-2xl w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-6 shadow-xl">
       <div class="flex items-start justify-between gap-4">
-        <h3 id="contactTitle" class="text-xl md:text-2xl font-bold">Send us a message</h3>
-        <button id="closeContact" class="rounded-xl border px-3 py-2 text-sm">Close</button>
+        <h3 id="contactTitle" data-i18n="contactModal.title" class="text-xl md:text-2xl font-bold">Envíanos un mensaje</h3>
+        <button id="closeContact" data-i18n="modal.close" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm shrink-0">Cerrar</button>
       </div>
       <form method="POST" action="https://formspree.io/f/mvgvjbjn" class="grid gap-4 mt-4">
         <div class="grid md:grid-cols-2 gap-4">
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">Name</span>
-            <div class="relative">
-              <span class="absolute left-3 top-1/2 -translate-y-1/2">👤</span>
-              <input required name="name" type="text"
-                     class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                            focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
-            </div>
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium" data-i18n="form.name">Nombre</span>
+            <input required name="Name" type="text" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
           </label>
-          <label class="grid gap-1 text-sm">
-            <span class="font-medium">Email</span>
-            <div class="relative">
-              <span class="absolute left-3 top-1/2 -translate-y-1/2">✉️</span>
-              <input required name="email" type="email"
-                     class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                            focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20" />
-            </div>
+          <label class="grid gap-1.5 text-sm">
+            <span class="font-medium" data-i18n="form.email">Correo electrónico</span>
+            <input required name="Email" type="email" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40" />
           </label>
         </div>
-        <label class="grid gap-1 text-sm">
-          <span class="font-medium">Message</span>
-          <div class="relative">
-            <span class="absolute left-3 top-3">✍️</span>
-            <textarea required name="message" rows="5"
-                      class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 pl-9 pr-3 py-2
-                             focus:outline-none focus:ring-4 ring-cyan-500/20 dark:ring-cyan-400/20"></textarea>
-          </div>
+        <label class="grid gap-1.5 text-sm">
+          <span class="font-medium" data-i18n="form.message">Mensaje</span>
+          <textarea required name="Message" rows="5" class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 focus:outline-none focus:ring-2 ring-indigo-500/40"></textarea>
         </label>
-        <div class="flex items-center justify-between">
-          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+        <div class="flex items-center justify-between gap-4">
+          <label class="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
             <input type="checkbox" required class="accent-slate-900 dark:accent-white" />
-            I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.
+            <span data-i18n-html="form.privacy">Acepto la <a href="privacy.html" class="link-underline">política de privacidad</a>.</span>
           </label>
-          <button type="submit" class="inline-flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 font-medium shadow hover:shadow-lg">
-            Send <span aria-hidden>→</span>
+          <button type="submit" class="inline-flex justify-center items-center gap-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 font-semibold hover:opacity-90 shrink-0">
+            <span data-i18n="form.submit">Enviar</span> <span aria-hidden>→</span>
           </button>
         </div>
       </form>
@@ -548,88 +330,143 @@ function w3_close() {
   </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="assets/site.js"></script>
   <script>
-    // === Calendly Config (fixed) ===
+    // === Calendly ===
     const CALENDLY_URL = 'https://calendly.com/cisco-sofbit/30min';
-    const cw = document.getElementById('calendly-widget');
-    if (cw) cw.setAttribute('data-url', CALENDLY_URL);
-    function openCalendly(e){
+    function openCalendly(e) {
       e.preventDefault();
       if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
         Calendly.initPopupWidget({ url: CALENDLY_URL });
-      } else if (cw) {
-        cw.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
         window.location.href = CALENDLY_URL;
       }
     }
-    document.querySelectorAll('[data-calendly="open"]').forEach(el=> el.addEventListener('click', openCalendly));
+    document.querySelectorAll('[data-calendly="open"]').forEach((el) => el.addEventListener('click', openCalendly));
 
-    // Theme toggle
-    const toggle = document.getElementById('themeToggle');
-    const root = document.documentElement; const KEY = 'prefers-dark';
-    function applyTheme(){ const p = localStorage.getItem(KEY); p==='true'?root.classList.add('dark'):root.classList.remove('dark'); }
-    toggle && toggle.addEventListener('click',()=>{ const next = !(localStorage.getItem(KEY)==='true'); localStorage.setItem(KEY, String(next)); applyTheme(); updateImagesForTheme(); });
-    applyTheme();
+    // === i18n dictionary ===
+    window.I18N_STRINGS = {
+      es: {
+        __title__: 'Sofbit — Código chileno, impacto global',
+        __description__: 'Sofbit SpA ofrece ingeniería de software nearshore desde Vitacura, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo.',
+        'nav.edge': 'Ventajas', 'nav.work': 'Servicios', 'nav.jobs': 'Empleos', 'nav.apply': 'Postular', 'nav.contact': 'Contacto', 'nav.menu': 'Menú',
+        'cta.book': 'Agendar una llamada',
+        'hero.eyebrow': 'Ingeniería de software nearshore',
+        'hero.title1': 'Código chileno,', 'hero.title2': 'para Latinoamérica y el mundo.',
+        'hero.sub1': 'Tu huso horario. Tu idioma. Nuestra experiencia.',
+        'hero.sub2': 'Ingeniería de software nearshore desde Santiago y Viña del Mar. Desarrolladores senior bilingües, con cobertura horaria para Latinoamérica y clientes globales.',
+        'hero.cta1': 'Agendar una llamada', 'hero.cta2': 'Conocer más',
+        'hero.stack': 'De full-stack a IA: TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin. Cloud-native en AWS/Azure/GCP. Integración de LLM y agentes inteligentes. Desde aumento de personal hasta equipos dedicados.',
+        'hero.imgAlt': 'Skyline de Santiago de Chile',
+        'features.eyebrow': 'Por qué Sofbit', 'features.title': 'Ventajas claras, sin relleno', 'features.sub': 'Esto es lo que obtienes al trabajar con nosotros.',
+        'features.card1.title': 'Ingenieros senior listos desde el día uno', 'features.card1.body': 'Especialistas full-stack, mobile y cloud, rigurosamente evaluados. De días a productivos, no meses.',
+        'features.card2.title': 'Colaboración en tiempo real, en tu huso horario', 'features.card2.body': 'Trabajamos codo a codo con equipos en Latinoamérica y clientes globales. Sin demoras de un día para otro.',
+        'features.card3.title': 'Comunicación clara, sin fricción', 'features.card3.body': 'Inglés fluido, buen criterio de producto y actualizaciones asíncronas detalladas.',
+        'about.eyebrow': 'Cómo trabajamos', 'about.title': 'Servicios y proceso',
+        'about.body': 'Nos integramos a tu flujo de trabajo actual —Jira, GitHub, Slack, daily standups— y entregamos código listo para producción, rápido.',
+        'about.li1': '<strong>De full-stack a IA:</strong> TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin.',
+        'about.li2': '<strong>Cloud-native:</strong> AWS / Azure / GCP con IaC, contenedores y observabilidad.',
+        'about.li3': '<strong>Sistemas inteligentes:</strong> integración de LLM y agentes con impacto real en el producto.',
+        'about.li4': '<strong>Modalidad flexible:</strong> desde aumento de personal hasta equipos dedicados.',
+        'about.imgAlt': 'Viña del Mar, Chile',
+        'jobs.eyebrow': 'Únete al equipo', 'jobs.title': 'Vacantes abiertas', 'jobs.sub': 'Súmate a nuestro equipo — ingenieros senior en Santiago y Viña del Mar.',
+        'jobs.prev': '← Anterior', 'jobs.next': 'Siguiente →', 'jobs.learnMore': 'Ver más',
+        'careers.eyebrow': 'Talento', 'careers.title': 'Estamos contratando', 'careers.sub': '¿Buscas tu próxima oportunidad? Nos encantaría saber de ti.',
+        'form.name': 'Nombre completo', 'form.email': 'Correo electrónico', 'form.message': 'Mensaje', 'form.role': 'Rol', 'form.notes': 'Notas (opcional)',
+        'form.notes.placeholder': 'Enlaces, disponibilidad, portafolio…',
+        'form.role.fullstack': 'Ingeniero(a) Full-stack Senior', 'form.role.mobile': 'Ingeniero(a) Mobile', 'form.role.curator': 'Curador(a) de Datos de IA', 'form.role.sre': 'DevOps / SRE', 'form.role.other': 'Otro',
+        'form.privacy': 'Acepto la <a href="privacy.html" class="link-underline">política de privacidad</a>.',
+        'form.submit': 'Enviar',
+        'banner.text': 'Código chileno. Impacto global.', 'banner.imgAlt': 'Santiago de noche',
+        'contact.eyebrow': 'Contacto', 'contact.title': 'Hablemos', 'contact.sub': '¿Preguntas, necesidades de staffing o ideas de proyecto? Envíanos un mensaje.',
+        'contact.cta': 'Contáctanos / Enviar mensaje', 'contact.address': '📍 Vitacura, Santiago, Chile', 'contact.mapAlt': 'Mapa de Vitacura, Santiago',
+        'contactModal.title': 'Envíanos un mensaje',
+        'footer.location': 'Sofbit SpA — Vitacura, Santiago de Chile · Santiago y Viña del Mar',
+        'footer.rightsSuffix': 'Todos los derechos reservados.',
+        'modal.close': 'Cerrar', 'modal.requirements': 'Requisitos', 'modal.apply': 'Postular'
+      },
+      en: {
+        __title__: 'Sofbit — Chilean Code, Global Impact',
+        __description__: 'Sofbit SpA provides nearshore software engineering from Vitacura, Santiago Chile. Chilean code powering innovation and support across Latin America and the world.',
+        'nav.edge': 'Edge', 'nav.work': 'Work', 'nav.jobs': 'Jobs', 'nav.apply': 'Apply', 'nav.contact': 'Contact', 'nav.menu': 'Menu',
+        'cta.book': 'Book a call',
+        'hero.eyebrow': 'Nearshore software engineering',
+        'hero.title1': 'Chilean Code,', 'hero.title2': 'for Latin America and the world.',
+        'hero.sub1': 'Your timezone. Your language. Our expertise.',
+        'hero.sub2': 'Nearshore software engineering from Santiago and Viña del Mar. Senior bilingual developers, timezone-aligned with LatAm and global clients.',
+        'hero.cta1': 'Book a Call', 'hero.cta2': 'Learn More',
+        'hero.stack': 'Full-stack to AI: TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin. Cloud-native on AWS/Azure/GCP. LLM integration and intelligent agents. Staff augmentation to dedicated squads.',
+        'hero.imgAlt': 'Santiago, Chile skyline',
+        'features.eyebrow': 'Why Sofbit', 'features.title': 'Clear value, no fluff', 'features.sub': 'What you get when you work with us.',
+        'features.card1.title': 'Senior engineers who hit the ground running', 'features.card1.body': 'Vetted full-stack, mobile, and cloud specialists. Days to productive, not months.',
+        'features.card2.title': 'Real-time collaboration in your timezone', 'features.card2.body': 'Work side-by-side with teams across Latin America and global clients. No overnight delays.',
+        'features.card3.title': 'Clear communication, zero friction', 'features.card3.body': 'Fluent English, strong product sense, and detailed async updates.',
+        'about.eyebrow': 'How we work', 'about.title': 'Services & Process',
+        'about.body': 'We plug into your existing workflow—Jira, GitHub, Slack, daily standups—and ship production-ready code fast.',
+        'about.li1': '<strong>Full-stack to AI:</strong> TypeScript, React/Next, Python, .NET, Java, Swift, Kotlin.',
+        'about.li2': '<strong>Cloud-native:</strong> AWS / Azure / GCP with IaC, containers, and observability.',
+        'about.li3': '<strong>Intelligent systems:</strong> LLM integration and agents for real product impact.',
+        'about.li4': '<strong>Flexible engagement:</strong> Staff augmentation to dedicated squads.',
+        'about.imgAlt': 'Viña del Mar, Chile',
+        'jobs.eyebrow': 'Join the team', 'jobs.title': 'Open positions', 'jobs.sub': 'Join our team — senior engineers in Santiago and Viña del Mar.',
+        'jobs.prev': '← Prev', 'jobs.next': 'Next →', 'jobs.learnMore': 'Learn more',
+        'careers.eyebrow': 'Talent', 'careers.title': "We're hiring", 'careers.sub': "Looking for your next opportunity? We'd love to hear from you.",
+        'form.name': 'Full name', 'form.email': 'Email', 'form.message': 'Message', 'form.role': 'Role', 'form.notes': 'Notes (optional)',
+        'form.notes.placeholder': 'Links, availability, portfolio…',
+        'form.role.fullstack': 'Senior Full-stack Engineer', 'form.role.mobile': 'Mobile Engineer', 'form.role.curator': 'AI Data Curator', 'form.role.sre': 'DevOps / SRE', 'form.role.other': 'Other',
+        'form.privacy': 'I agree to the <a href="privacy.html" class="link-underline">privacy policy</a>.',
+        'form.submit': 'Submit',
+        'banner.text': 'Chilean Code. Global Impact.', 'banner.imgAlt': 'Santiago at night',
+        'contact.eyebrow': 'Contact', 'contact.title': 'Get in touch', 'contact.sub': 'Questions, staffing needs, or project ideas—send us a message.',
+        'contact.cta': 'Contact us / Send a message', 'contact.address': '📍 Vitacura, Santiago, Chile', 'contact.mapAlt': 'Map of Vitacura, Santiago',
+        'contactModal.title': 'Send us a message',
+        'footer.location': 'Sofbit SpA — Vitacura, Santiago Chile · Santiago and Viña del Mar',
+        'footer.rightsSuffix': 'All rights reserved.',
+        'modal.close': 'Close', 'modal.requirements': 'Requirements', 'modal.apply': 'Apply'
+      }
+    };
 
-    // Swap logos/images for dark & light
-    function updateImagesForTheme() {
-      const isDark = document.documentElement.classList.contains('dark');
-      document.querySelectorAll('img[data-light][data-dark]').forEach(img => {
-        img.src = isDark ? img.getAttribute('data-dark') : img.getAttribute('data-light');
-      });
-    }
-    updateImagesForTheme();
+    const i18n = window.SofbitSite.initI18n('es');
+    window.SofbitSite.initTheme();
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scroll progress bar
     const progress = document.getElementById('progress');
-    window.addEventListener('scroll', ()=>{ const h = document.documentElement; const s = h.scrollTop; const d = h.scrollHeight - h.clientHeight; progress.style.transform = `scaleX(${d? s/d : 0})`; });
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const d = h.scrollHeight - h.clientHeight;
+      progress.style.transform = `scaleX(${d ? h.scrollTop / d : 0})`;
+    });
 
     // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
-    menuBtn && menuBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+    menuBtn && menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
 
     // Intersection reveal animations
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-    // Scroll-spy (active nav + hash updates)
+    // Scroll-spy (active nav)
     const sections = Array.from(document.querySelectorAll('section[id]'));
     const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
-    const byId = id => navLinks.find(a => a.getAttribute('href') === `#${id}`);
-    function setActive(id){
-      navLinks.forEach(a => a.removeAttribute('aria-current'));
-      const link = byId(id); if (link) link.setAttribute('aria-current','page');
+    const byId = (id) => navLinks.find((a) => a.getAttribute('href') === `#${id}`);
+    function setActive(id) {
+      navLinks.forEach((a) => a.removeAttribute('aria-current'));
+      const link = byId(id); if (link) link.setAttribute('aria-current', 'page');
     }
-    const spy = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ const id = e.target.id; setActive(id); }
-      });
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
-    sections.forEach(sec => spy.observe(sec));
-    navLinks.forEach(a=>{
-      a.addEventListener('click', (ev)=>{
-        const id = a.getAttribute('href').slice(1);
-        const target = document.getElementById(id);
-        if(!target) return; ev.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        target.setAttribute('tabindex','-1'); target.focus({ preventScroll: true });
-      });
-    });
+    sections.forEach((sec) => spy.observe(sec));
 
-    // Clean URL if opened with a hash
-    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-    // Intercept in-page hash links and keep clean URLs
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        const id = href.slice(1);
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
         const target = document.getElementById(id);
         if (!target) return;
         e.preventDefault();
@@ -637,84 +474,144 @@ function w3_close() {
         history.replaceState(null, '', location.pathname + location.search);
       });
     });
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
 
-    // ===== Jobs Data =====
+    // ===== Jobs Data (bilingual) =====
     const JOBS = [
       {
         id: 'fullstack',
-        title: 'Senior Full-stack Engineer',
-        summary: 'Build production web apps for U.S. customers with TypeScript, Node, React, and AWS. Product-focused, fast delivery.',
-        tags: ['TypeScript','Node','React','AWS'],
-        requirements: [
-          '8+ years building and shipping web apps in production',
-          'Fluency in TypeScript/Node and React/Next.js',
-          'Experience with AWS (Lambda, ECS/Fargate, RDS/DynamoDB)',
-          'Comfortable with CI/CD, automated testing, and code reviews',
-          'Strong English communication (written & spoken)'
-        ]
+        es: {
+          title: 'Ingeniero(a) Full-stack Senior',
+          summary: 'Construye aplicaciones web en producción para clientes de Latinoamérica y el mundo con TypeScript, Node, React y AWS. Foco en producto y entrega rápida.',
+          tags: ['TypeScript', 'Node', 'React', 'AWS'],
+          requirements: [
+            '8+ años construyendo y entregando aplicaciones web en producción',
+            'Dominio de TypeScript/Node y React/Next.js',
+            'Experiencia con AWS (Lambda, ECS/Fargate, RDS/DynamoDB)',
+            'Cómodo con CI/CD, testing automatizado y code reviews',
+            'Inglés avanzado, escrito y hablado'
+          ]
+        },
+        en: {
+          title: 'Senior Full-stack Engineer',
+          summary: 'Build production web apps for customers across Latin America and the world with TypeScript, Node, React, and AWS. Product-focused, fast delivery.',
+          tags: ['TypeScript', 'Node', 'React', 'AWS'],
+          requirements: [
+            '8+ years building and shipping web apps in production',
+            'Fluency in TypeScript/Node and React/Next.js',
+            'Experience with AWS (Lambda, ECS/Fargate, RDS/DynamoDB)',
+            'Comfortable with CI/CD, automated testing, and code reviews',
+            'Strong English communication (written & spoken)'
+          ]
+        }
       },
       {
         id: 'mobile',
-        title: 'Mobile Engineer',
-        summary: 'Ship high-quality iOS/Android apps with React Native or native stacks. Work closely with product and design.',
-        tags: ['React Native','iOS','Android','Kotlin/Swift'],
-        requirements: [
-          '5+ years building mobile apps (React Native or native)',
-          'Experience publishing to App Store / Play Store',
-          'Performance profiling and debugging skills',
-          'Familiar with mobile CI, OTA updates, and analytics',
-          'Strong UX sensibility and attention to detail'
-        ]
+        es: {
+          title: 'Ingeniero(a) Mobile',
+          summary: 'Desarrolla apps iOS/Android de alta calidad con React Native o stacks nativos. Trabajo cercano con producto y diseño.',
+          tags: ['React Native', 'iOS', 'Android', 'Kotlin/Swift'],
+          requirements: [
+            '5+ años desarrollando apps móviles (React Native o nativo)',
+            'Experiencia publicando en App Store / Play Store',
+            'Habilidades de profiling y debugging de performance',
+            'Familiaridad con CI móvil, actualizaciones OTA y analítica',
+            'Fuerte sensibilidad de UX y atención al detalle'
+          ]
+        },
+        en: {
+          title: 'Mobile Engineer',
+          summary: 'Ship high-quality iOS/Android apps with React Native or native stacks. Work closely with product and design.',
+          tags: ['React Native', 'iOS', 'Android', 'Kotlin/Swift'],
+          requirements: [
+            '5+ years building mobile apps (React Native or native)',
+            'Experience publishing to App Store / Play Store',
+            'Performance profiling and debugging skills',
+            'Familiar with mobile CI, OTA updates, and analytics',
+            'Strong UX sensibility and attention to detail'
+          ]
+        }
       },
       {
         id: 'modeler',
-        title: 'AI Data Curator',
-        summary: 'Evaluate and refine AI model outputs to ensure accuracy and quality. Review LLM responses, identify patterns in errors, and create datasets that improve model performance.',
-        tags: ['LLM Evaluation', 'Data Analysis', 'RLHF', 'Quality Assurance'],
-        requirements: [
-          '2+ years in data analysis, QA, or related field',
-          'Strong attention to detail and pattern recognition skills',
-          'Experience working with AI/ML outputs or content moderation',
-          'Excellent written communication and documentation abilities',
-          'Understanding of LLMs and common failure modes',
-          'Bonus: Experience with prompt engineering or annotation tools'
-        ]
+        es: {
+          title: 'Curador(a) de Datos de IA',
+          summary: 'Evalúa y refina las respuestas de modelos de IA para asegurar precisión y calidad. Revisa respuestas de LLM, identifica patrones de error y crea datasets que mejoran el desempeño del modelo.',
+          tags: ['Evaluación de LLM', 'Análisis de Datos', 'RLHF', 'Control de Calidad'],
+          requirements: [
+            '2+ años en análisis de datos, QA o campo afín',
+            'Fuerte atención al detalle y reconocimiento de patrones',
+            'Experiencia trabajando con resultados de IA/ML o moderación de contenido',
+            'Excelentes habilidades de comunicación escrita y documentación',
+            'Conocimiento de LLMs y sus modos de falla comunes',
+            'Deseable: experiencia en prompt engineering o herramientas de anotación'
+          ]
+        },
+        en: {
+          title: 'AI Data Curator',
+          summary: 'Evaluate and refine AI model outputs to ensure accuracy and quality. Review LLM responses, identify patterns in errors, and create datasets that improve model performance.',
+          tags: ['LLM Evaluation', 'Data Analysis', 'RLHF', 'Quality Assurance'],
+          requirements: [
+            '2+ years in data analysis, QA, or related field',
+            'Strong attention to detail and pattern recognition skills',
+            'Experience working with AI/ML outputs or content moderation',
+            'Excellent written communication and documentation abilities',
+            'Understanding of LLMs and common failure modes',
+            'Bonus: Experience with prompt engineering or annotation tools'
+          ]
+        }
       },
       {
         id: 'sre',
-        title: 'DevOps / SRE',
-        summary: 'Own reliability and delivery pipelines. Kubernetes, IaC, observability, and platform tooling for fast iteration.',
-        tags: ['Kubernetes','IaC','Observability','AWS/Azure/GCP'],
-        requirements: [
-          '10+ years as DevOps/SRE with modern cloud platforms',
-          'Hands-on Kubernetes and infrastructure-as-code (Terraform/Pulumi)',
-          'Logging/metrics/tracing (ELK, Prometheus, Grafana, OpenTelemetry)',
-          'Security best practices, secrets, and incident response',
-          'Excellent collaboration with developers and QA'
-        ]
+        es: {
+          title: 'DevOps / SRE',
+          summary: 'Responsable de la confiabilidad y los pipelines de entrega. Kubernetes, IaC, observabilidad y herramientas de plataforma para iterar rápido.',
+          tags: ['Kubernetes', 'IaC', 'Observabilidad', 'AWS/Azure/GCP'],
+          requirements: [
+            '10+ años como DevOps/SRE con plataformas cloud modernas',
+            'Experiencia práctica en Kubernetes e infraestructura como código (Terraform/Pulumi)',
+            'Logging/métricas/trazabilidad (ELK, Prometheus, Grafana, OpenTelemetry)',
+            'Buenas prácticas de seguridad, manejo de secretos y respuesta a incidentes',
+            'Excelente colaboración con desarrolladores y QA'
+          ]
+        },
+        en: {
+          title: 'DevOps / SRE',
+          summary: 'Own reliability and delivery pipelines. Kubernetes, IaC, observability, and platform tooling for fast iteration.',
+          tags: ['Kubernetes', 'IaC', 'Observability', 'AWS/Azure/GCP'],
+          requirements: [
+            '10+ years as DevOps/SRE with modern cloud platforms',
+            'Hands-on Kubernetes and infrastructure-as-code (Terraform/Pulumi)',
+            'Logging/metrics/tracing (ELK, Prometheus, Grafana, OpenTelemetry)',
+            'Security best practices, secrets, and incident response',
+            'Excellent collaboration with developers and QA'
+          ]
+        }
       }
     ];
 
-    // Render carousel slides (cards are fully clickable)
     const carousel = document.getElementById('jobsCarousel');
     function renderSlides() {
+      const lang = i18n.getLang();
       carousel.innerHTML = '';
-      JOBS.forEach(job => {
+      JOBS.forEach((job) => {
+        const j = job[lang];
         const el = document.createElement('article');
-        el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950 cursor-pointer focus:outline-none focus:ring-4 ring-cyan-500/20';
+        el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-950 cursor-pointer focus:outline-none focus:ring-2 ring-indigo-500/40';
         el.setAttribute('data-id', job.id);
         el.setAttribute('role', 'button');
         el.setAttribute('tabindex', '0');
         el.innerHTML = `
-          <h3 class="font-semibold">${job.title}</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">${job.tags.join(' · ')}</p>
-          <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">${job.summary}</p>
-          <span class="mt-4 inline-flex rounded-xl border px-3 py-2 text-sm">Learn more</span>
+          <h3 class="font-semibold">${j.title}</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">${j.tags.join(' · ')}</p>
+          <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">${j.summary}</p>
+          <span class="mt-4 inline-flex rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-2 text-sm">${i18n.t(lang, 'jobs.learnMore')}</span>
         `;
         carousel.appendChild(el);
       });
     }
     renderSlides();
+    document.addEventListener('langchange', renderSlides);
 
     // Job Modal logic
     const modal = document.getElementById('jobModal');
@@ -724,54 +621,60 @@ function w3_close() {
     const jobReqs = document.getElementById('jobReqs');
     const jobApply = document.getElementById('jobApply');
     let lastFocus = null;
+    let openJobId = null;
 
-    function openJob(id){
-      const job = JOBS.find(j => j.id === id); if (!job) return;
-      jobTitle.textContent = job.title;
-      jobSummary.textContent = job.summary;
-      jobReqs.innerHTML = job.requirements.map(r => `<li>${r}</li>`).join('');
+    function renderOpenJob() {
+      if (!openJobId) return;
+      const lang = i18n.getLang();
+      const job = JOBS.find((j) => j.id === openJobId);
+      if (!job) return;
+      const j = job[lang];
+      jobTitle.textContent = j.title;
+      jobSummary.textContent = j.summary;
+      jobReqs.innerHTML = j.requirements.map((r) => `<li>${r}</li>`).join('');
+    }
+    function openJob(id) {
+      openJobId = id;
+      renderOpenJob();
       jobApply.href = '#apply';
       modal.classList.add('show');
       lastFocus = document.activeElement;
       closeModalBtn.focus();
-      const onKey = (e)=>{ if(e.key === 'Escape'){ closeJob(); } };
+      const onKey = (e) => { if (e.key === 'Escape') closeJob(); };
       document.addEventListener('keydown', onKey, { once: true });
     }
-    function closeJob(){
+    function closeJob() {
       modal.classList.remove('show');
+      openJobId = null;
       if (lastFocus) lastFocus.focus();
     }
     closeModalBtn.addEventListener('click', closeJob);
-    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeJob(); });
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeJob(); });
+    document.addEventListener('langchange', renderOpenJob);
 
-    // Open job from card (click or Enter)
-    carousel.addEventListener('click', (e)=>{
+    carousel.addEventListener('click', (e) => {
       const card = e.target.closest('article[data-id]');
       if (!card) return;
       openJob(card.getAttribute('data-id'));
     });
-    carousel.addEventListener('keydown', (e)=>{
+    carousel.addEventListener('keydown', (e) => {
       const card = e.target.closest('article[data-id]');
       if (!card) return;
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openJob(card.getAttribute('data-id'));
-      }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openJob(card.getAttribute('data-id')); }
     });
 
-    // Carousel controls (manual only; no auto-scroll)
+    // Carousel controls (manual only)
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    function scrollByCards(dir = 1){
+    function scrollByCards(dir = 1) {
       const card = carousel.querySelector('article');
       if (!card) return;
-      const gap = 16; // 1rem
+      const gap = 16;
       const shift = card.getBoundingClientRect().width + gap;
       carousel.scrollBy({ left: dir * shift, behavior: 'smooth' });
     }
-    prevBtn && prevBtn.addEventListener('click', ()=> scrollByCards(-1));
-    nextBtn && nextBtn.addEventListener('click', ()=> scrollByCards(1));
-    // NOTE: Auto-advance removed per request (no auto scrolling)
+    prevBtn && prevBtn.addEventListener('click', () => scrollByCards(-1));
+    nextBtn && nextBtn.addEventListener('click', () => scrollByCards(1));
 
     // Contact modal
     const contactModal = document.getElementById('contactModal');
@@ -779,21 +682,20 @@ function w3_close() {
     const closeContact = document.getElementById('closeContact');
     let lastFocusContact = null;
 
-    function openContactModal(){
+    function openContactModal() {
       contactModal.classList.add('show');
       lastFocusContact = document.activeElement;
       closeContact.focus();
-      const onKey = (e)=>{ if(e.key === 'Escape'){ closeContactModal(); } };
+      const onKey = (e) => { if (e.key === 'Escape') closeContactModal(); };
       document.addEventListener('keydown', onKey, { once: true });
     }
-    function closeContactModal(){
+    function closeContactModal() {
       contactModal.classList.remove('show');
       if (lastFocusContact) lastFocusContact.focus();
     }
     openContact.addEventListener('click', openContactModal);
     closeContact.addEventListener('click', closeContactModal);
-    contactModal.addEventListener('click', (e)=>{ if(e.target === contactModal) closeContactModal(); });
+    contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeContactModal(); });
   </script>
->>>>>>> ae0bfad580a20b0899513ad4b8051ba4802bf86d
 </body>
 </html>
