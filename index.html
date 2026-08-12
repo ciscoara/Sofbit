@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="__title__">Sofbit — Código chileno, impacto global</title>
-  <meta name="description" data-i18n-attr="content:__description__" content="Sofbit SpA ofrece ingeniería de software nearshore desde Vitacura, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo." />
+  <meta name="description" data-i18n-attr="content:__description__" content="Sofbit SpA ofrece ingeniería de software nearshore desde Las Condes, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo." />
   <meta property="og:title" data-i18n-attr="content:__title__" content="Sofbit — Código chileno, impacto global" />
-  <meta property="og:description" data-i18n-attr="content:__description__" content="Sofbit SpA, desde Vitacura, Santiago de Chile, entrega talento de desarrollo nearshore de primer nivel para impulsar la innovación y el crecimiento digital en Latinoamérica y el mundo." />
+  <meta property="og:description" data-i18n-attr="content:__description__" content="Sofbit SpA, desde Las Condes, Santiago de Chile, entrega talento de desarrollo nearshore de primer nivel para impulsar la innovación y el crecimiento digital en Latinoamérica y el mundo." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/sofbittransparent11.png" />
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -255,14 +256,27 @@
       <button id="openContact" data-i18n="contact.cta" class="mt-6 inline-flex justify-center items-center gap-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 font-semibold hover:opacity-90">
         Contáctanos / Enviar mensaje
       </button>
+    </div>
 
-      <div class="mt-14 grid md:grid-cols-2 gap-8 items-center text-left">
-        <div>
-          <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="contact.address">📍 Vitacura, Santiago, Chile</p>
+    <div class="max-w-4xl mx-auto px-4 mt-14 grid md:grid-cols-2 gap-6 items-stretch text-left">
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-6 md:p-8 flex flex-col justify-center gap-6">
+        <div class="flex items-start gap-3">
+          <span class="text-xl leading-none" aria-hidden="true">📍</span>
+          <div>
+            <p class="font-semibold" data-i18n="contact.officeLabel">Oficina Santiago</p>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400" data-i18n="contact.address">Av. Apoquindo 5950, Las Condes, Santiago, Chile</p>
+          </div>
         </div>
-        <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
-          <img src="assets/citymap.png" data-i18n-attr="alt:contact.mapAlt" alt="Mapa de Vitacura, Santiago" class="w-full h-auto" />
+        <div class="flex items-start gap-3">
+          <span class="text-xl leading-none" aria-hidden="true">✉️</span>
+          <div>
+            <p class="font-semibold" data-i18n="contact.emailLabel">Correo</p>
+            <a href="mailto:hello@sofbit.cl" class="mt-1 inline-block text-sm text-slate-600 dark:text-slate-400 link-underline">hello@sofbit.cl</a>
+          </div>
         </div>
+      </div>
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+        <img src="assets/citymap.png" data-i18n-attr="alt:contact.mapAlt" alt="Mapa de la oficina en Las Condes, Santiago" class="w-full h-full min-h-[220px] object-cover" />
       </div>
     </div>
   </section>
@@ -272,7 +286,7 @@
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img id="footerLogo" src="assets/sofbitavatar.png" data-light="assets/sofbitavatar.png" data-dark="assets/sofbitavatar_white.png" alt="Logo de Sofbit" class="h-7" />
-        <span class="text-sm text-slate-500" data-i18n="footer.location">Sofbit SpA — Vitacura, Santiago de Chile · Santiago y Viña del Mar</span>
+        <span class="text-sm text-slate-500" data-i18n="footer.location">Sofbit SpA — Las Condes, Santiago de Chile · Santiago y Viña del Mar</span>
       </div>
       <p class="text-sm text-slate-500">© <span id="year"></span> Sofbit SpA. <span data-i18n="footer.rightsSuffix">Todos los derechos reservados.</span></p>
     </div>
@@ -348,7 +362,7 @@
     window.I18N_STRINGS = {
       es: {
         __title__: 'Sofbit — Código chileno, impacto global',
-        __description__: 'Sofbit SpA ofrece ingeniería de software nearshore desde Vitacura, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo.',
+        __description__: 'Sofbit SpA ofrece ingeniería de software nearshore desde Las Condes, Santiago de Chile. Código chileno impulsando la innovación y el soporte para Latinoamérica y el mundo.',
         'nav.edge': 'Ventajas', 'nav.work': 'Servicios', 'nav.jobs': 'Empleos', 'nav.apply': 'Postular', 'nav.contact': 'Contacto', 'nav.menu': 'Menú',
         'cta.book': 'Agendar una llamada',
         'hero.eyebrow': 'Ingeniería de software nearshore',
@@ -379,15 +393,17 @@
         'form.submit': 'Enviar',
         'banner.text': 'Código chileno. Impacto global.', 'banner.imgAlt': 'Santiago de noche',
         'contact.eyebrow': 'Contacto', 'contact.title': 'Hablemos', 'contact.sub': '¿Preguntas, necesidades de staffing o ideas de proyecto? Envíanos un mensaje.',
-        'contact.cta': 'Contáctanos / Enviar mensaje', 'contact.address': '📍 Vitacura, Santiago, Chile', 'contact.mapAlt': 'Mapa de Vitacura, Santiago',
+        'contact.cta': 'Contáctanos / Enviar mensaje',
+        'contact.officeLabel': 'Oficina Santiago', 'contact.address': 'Av. Apoquindo 5950, Las Condes, Santiago, Chile', 'contact.emailLabel': 'Correo',
+        'contact.mapAlt': 'Mapa de la oficina en Las Condes, Santiago',
         'contactModal.title': 'Envíanos un mensaje',
-        'footer.location': 'Sofbit SpA — Vitacura, Santiago de Chile · Santiago y Viña del Mar',
+        'footer.location': 'Sofbit SpA — Las Condes, Santiago de Chile · Santiago y Viña del Mar',
         'footer.rightsSuffix': 'Todos los derechos reservados.',
         'modal.close': 'Cerrar', 'modal.requirements': 'Requisitos', 'modal.apply': 'Postular'
       },
       en: {
         __title__: 'Sofbit — Chilean Code, Global Impact',
-        __description__: 'Sofbit SpA provides nearshore software engineering from Vitacura, Santiago Chile. Chilean code powering innovation and support across Latin America and the world.',
+        __description__: 'Sofbit SpA provides nearshore software engineering from Las Condes, Santiago Chile. Chilean code powering innovation and support across Latin America and the world.',
         'nav.edge': 'Edge', 'nav.work': 'Work', 'nav.jobs': 'Jobs', 'nav.apply': 'Apply', 'nav.contact': 'Contact', 'nav.menu': 'Menu',
         'cta.book': 'Book a call',
         'hero.eyebrow': 'Nearshore software engineering',
@@ -418,9 +434,11 @@
         'form.submit': 'Submit',
         'banner.text': 'Chilean Code. Global Impact.', 'banner.imgAlt': 'Santiago at night',
         'contact.eyebrow': 'Contact', 'contact.title': 'Get in touch', 'contact.sub': 'Questions, staffing needs, or project ideas—send us a message.',
-        'contact.cta': 'Contact us / Send a message', 'contact.address': '📍 Vitacura, Santiago, Chile', 'contact.mapAlt': 'Map of Vitacura, Santiago',
+        'contact.cta': 'Contact us / Send a message',
+        'contact.officeLabel': 'Santiago Office', 'contact.address': 'Av. Apoquindo 5950, Las Condes, Santiago, Chile', 'contact.emailLabel': 'Email',
+        'contact.mapAlt': 'Map of the office in Las Condes, Santiago',
         'contactModal.title': 'Send us a message',
-        'footer.location': 'Sofbit SpA — Vitacura, Santiago Chile · Santiago and Viña del Mar',
+        'footer.location': 'Sofbit SpA — Las Condes, Santiago Chile · Santiago and Viña del Mar',
         'footer.rightsSuffix': 'All rights reserved.',
         'modal.close': 'Close', 'modal.requirements': 'Requirements', 'modal.apply': 'Apply'
       }
